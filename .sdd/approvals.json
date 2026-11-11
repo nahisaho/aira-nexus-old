@@ -1,0 +1,377 @@
+{
+  "chat": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet 5.5 independent state/runtime design reviews; fixed manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of approval-pack76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651",
+    "at": "2026-11-08T21:38:40.137Z",
+    "artifacts": {
+      ".sdd/specs/chat.md": "91402e6725b38564729ce3b2e59deb1dd2de46059080a69b8a06a800bddee409"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/chat-routes.ts": "7b767f19bfb26b46d0a5dc10b2d98c79d75bd92276b57a9bc22c31a3a06fedd2",
+      "src/server/chat.ts": "103949251deb04cb6496e8de9725d4294a4b4eaa1416d749e8dc63b50c6004c6",
+      "src/server/copilot-tools.ts": "1220c7d21a8f2368cd365f9ce6c1676d5f18349109394a45436aecdf939d0db1",
+      "src/server/copilot.ts": "bcdd9f706bb68a27083b37e81a24ef92675264ff83b2785b3aac130c3a62e834"
+    }
+  },
+  "data": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Independent Claude Sonnet5.5 candidate6 contract ready; explicit exact-spec user response approve-ten-exact-specifications; implementation/qualification pending",
+    "at": "2026-11-11T06:43:56.633Z",
+    "artifacts": {
+      ".sdd/specs/data.md": "b637b817cdfd279e96785fcee9214c5a35a90364920a7984fb78c4511c6c671d"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/file-preview.ts": "f563932515c6069d34efd2d227633d8655d1408a153e49b0d9585a20e218f950",
+      "src/server/file-routes.ts": "c0a51a7dd5e444ea953751b3c5608388e939a58daac4bc47cc6bad74dfdb319b",
+      "src/server/file-storage.ts": "74d7c2300be5e690318672b6abb0591ce89a06897aceb4b6750c27c46945fdec",
+      "src/server/files.ts": "6f0f05d1c6edf3b707ea9b52fc7fce66a82c74f46c36edf306652a4d0c666ecf",
+      "src/server/svg-preview.ts": "1119a147ee51947e27ae4ba9c81efd8024324171201bf5148ce87239b7d25c15"
+    }
+  },
+  "diagnostics": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Independent Claude Sonnet5.5 candidate6 contract ready; explicit exact-spec user response approve-ten-exact-specifications; implementation/qualification pending",
+    "at": "2026-11-11T06:44:01.527Z",
+    "artifacts": {
+      ".sdd/specs/diagnostics.md": "29bd99cfb07bb4127294919614ecbc38001e61449f350fc42c8387fc74723c22"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "scripts/backup.ts": "bfd4ed3b3808c1e7aa402a00bfd7421f9a7d00568193dcc825f0c6ca9228a0f8",
+      "scripts/restore-validation.ts": "7a2e852e4231720dc37841441fc5859d7dc6d6147bbc07fb34a6bb44b46e24a6",
+      "src/components/workspace-settings.tsx": "a888d19e313ea76a470519b898c2e40c3f352397c30568f6468bc51b3d9ed644",
+      "src/server/diagnostic-routes.ts": "569436ce1390c3c749c5ef286ee1bce08e52502ce17aced47aee53db2a3bc25f",
+      "src/server/diagnostics.ts": "d673d11df71ab4b7721ce029524a19209fb41a85a9f7310e2343fd4005466ce6",
+      "src/server/events.ts": "b794cc3ec0f523033fa05f40fa1eb863b61476d52581571b08974fbb52b21bf5"
+    }
+  },
+  "exchange": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:31.145Z",
+    "artifacts": {
+      ".sdd/specs/exchange.md": "330e2b99624fdb7fd888a2ad73bd3510ebc13161f5b0a193c580e793610efcdd"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "runtime/notebook_exchange.py": "2ac3690f6c9fe0a064d87bcd6f5670d1d1125cbf876cc5a9fe12377d7b86246e",
+      "src/server/exchange-routes.ts": "7edf5d6ebde7a86955c3ccd87a5c9ff6ea12588a9468a90812829ed55015faf9",
+      "src/server/exchange.ts": "19ed0e95720ca114e3ebb1e8e72da9c76b1a3814d672ec6956aa7a210c695b2d"
+    }
+  },
+  "notebook": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "User explicitly approved rich design v2 and the semantics-identical v3 heading/plan-hash correction; artifactSha256 fde60cbc737a68b24181a8accbac74a1296276fdcd3ae2eca25a60eadb9f5c04;10 exact paths shown; Sonnet5.5 blockers resolved; no release approval.",
+    "at": "2026-11-11T19:29:01.964Z",
+    "artifacts": {
+      ".sdd/specs/notebook.md": "77a385ee5d5fb7c178f3d00aef03561208239ac0199906c60def6c7edd1959c2"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "scripts/migrate.ts": "7d97b3c3776a510b34afaa8c3a990d44e0d7bba0247e9d3ff71124cd333d117b",
+      "src/server/notebook-routes.ts": "b6d004e15639b69e78e31c652539d4c52920305de1a2b527d94ec866a823800a",
+      "src/server/notebooks.ts": "4a3320581670c9c3aa793f40b046495b88c43ed63d39d0c45139b3ff9391d76c"
+    }
+  },
+  "operations": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:31.645Z",
+    "artifacts": {
+      ".sdd/specs/operations.md": "8fcdf9e979c79189d6c6ccd301d43db90fbea7496db69608524d899df2c35fcc"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "scripts/migrate.ts": "3409453dd52b2db234845e72d290fb7fda6eebce3e85afb6c7fd2b76f4a1a151",
+      "src/server/credentials.ts": "15d28f4e930b6a88dc8f0da7bce5ad26be73630b0a5c66d344484e5f88acf264",
+      "src/server/db-container.ts": "620975603144a71750b65f249f75f7aab677573a03b213f277eb5ec135a9033d",
+      "src/server/operations.ts": "8dc190f885750b3bcb5fb1c12171468a41c035493b46c3c991c663e621ddcd5f",
+      "src/server/owned-containers.ts": "954b2cef7c867c97429883ae303033f1637cf6a91814131f0b7a1582c2d7f604"
+    }
+  },
+  "projects": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Independent Claude Sonnet5.5 candidate6 contract ready; explicit exact-spec user response approve-ten-exact-specifications; implementation/qualification pending",
+    "at": "2026-11-11T06:43:54.991Z",
+    "artifacts": {
+      ".sdd/specs/projects.md": "64135a18b436f55662bdea82d033f6f58977c9f3200cc8cbf5cd1fdaf26d3fa9"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/local-boundary.ts": "1d852f6c51f9b509ecde8833aeec26a762be024f9a8db618d9dbac258aa303d8",
+      "src/server/project-routes.ts": "b1f6c01c51043b03a53fe5e85944675d1f5f9294bb75a5a0a0686a2014529479",
+      "src/server/project-scope.ts": "4f40e9f59a258860e02bf50a8c6fac9b2f16c788de234d44d9884408c6462622",
+      "src/server/projects.ts": "60174a38118dad56214153f594e1781b2d84233d735ec32f6988e51a00bea0e8"
+    }
+  },
+  "proposals": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:32.157Z",
+    "artifacts": {
+      ".sdd/specs/proposals.md": "a7ed130604ee6e002b404b3cd5a690ab59fa20c2abe5dde59a1c42ae3ac6f0ff"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/confirmations.ts": "32878acb92662efe7e5786bf8402341424e4eeeb302b21ed229467aafeff4e9d",
+      "src/server/proposal-routes.ts": "9f278945237692f9dc67c86686ef46af6d0c3d8a0c4dcf835d343e433bcbbb3d",
+      "src/server/proposals.ts": "18cb7259d776e9449ef4df395594abce3f3ac44e053d303a45030a3371344431"
+    }
+  },
+  "provenance": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:32.408Z",
+    "artifacts": {
+      ".sdd/specs/provenance.md": "6e572672a7f1cd087f5bc5ea7afff89abccf98404e7051de26243cfc5a0ad80f"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/chat-context.ts": "8d9cffd78bbf0e937289820c028146ed3ba320906d65de88885b34061ba4e857",
+      "src/server/files.ts": "f39b9613f2df9361d39536f885486e267f204cb98608e46becd89208952634ab",
+      "src/server/provenance.ts": "620137df477ba61afafa0cf5cb09a7ca600cd7a64c50cd634d0768c043033c5e",
+      "src/server/run-snapshots.ts": "55b4b4b29c5b68e5375645458c4f6b426b87bc36df90be8cd7f68ed558b505c6"
+    }
+  },
+  "research-checks": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:32.665Z",
+    "artifacts": {
+      ".sdd/specs/research-checks.md": "4cf6803eb78ad555221be14e474c9bbb2349f1e61046690a5efc26a59edd4cbe"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/check-routes.ts": "6ea27ac0a507590c75dac5e42445928770ad52f8faa22df05c4f0f7e0a983d51",
+      "src/server/operations.ts": "20d5ab16faca421ff9a7adb44a088f475223f476750165d928f83eccd81c76f6",
+      "src/server/research-checks.ts": "323e7c6062d5a47dd70c674be6ef692150e1faf8b430145ea4d4c7f53653f82f"
+    }
+  },
+  "research-extensions": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Independent Claude Sonnet5.5 candidate6 contract ready; explicit exact-spec user response approve-ten-exact-specifications; implementation/qualification pending",
+    "at": "2026-11-11T06:44:04.796Z",
+    "artifacts": {
+      ".sdd/specs/research-extensions.md": "d98787b0537e5c8cf5333dafd3cce62609212e5c6556991c7dff775450af3e5e"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {}
+  },
+  "runner": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:33.170Z",
+    "artifacts": {
+      ".sdd/specs/runner.md": "bbc04298af2595bc637a46e817dab4b741076bee80d2d45a3b92aeee1c1a2cf0"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "runtime/protocol.py": "d795cb1e22d684fae4c7d3762eea1f243e84fc0a61e8e06958a7e014b3764db8",
+      "runtime/typed_bridge.py": "9c5ca1228fcec2162e7e56212644108033968c604138e37b7ab5353b34f292a0",
+      "runtime/worker.py": "f0f2a1cb6b0922c3120c1fe0d152c5b7e29aa076401d0e1260457d8dece495f4",
+      "src/server/runtime.ts": "457adc7452811640ebe9f56f51954d85b00d9af08665800674778931658e21b2",
+      "src/server/transfers.ts": "7c3e3a2be530a253aa0caee075a9a5d88dc592770221118b5b4bd889b7d5c3e5"
+    }
+  },
+  "scientific-rendering": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "User explicitly approved rich design v2 and the semantics-identical v3 heading/plan-hash correction; artifactSha256 fde60cbc737a68b24181a8accbac74a1296276fdcd3ae2eca25a60eadb9f5c04;10 exact paths shown; Sonnet5.5 blockers resolved; no release approval.",
+    "at": "2026-11-11T19:29:05.981Z",
+    "artifacts": {
+      ".sdd/specs/scientific-rendering.md": "dd43351373ba89d3d5294b9bed6d64e6ab881421617b69aa1f1cc1af0273e5dc"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/components/scientific-text.tsx": "3e253329c549260ff3c74bcdf6998643cf3ffcf2462c65d28da8e369344249ae",
+      "src/server/math-worker.ts": "b3011ecbac8c094cb569630362ec0c1d9edf24ed771c510ecb0ce5ae757fadb9",
+      "src/server/scientific-rendering.ts": "0b60145602265a70b459abfd6f847f6145c035241ac2476b42bae12537e732a2"
+    }
+  },
+  "sessions": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:33.686Z",
+    "artifacts": {
+      ".sdd/specs/sessions.md": "c62d2f47868c216561f512c1d7cdf40872d870d2827a2c5a938f2cea4585ed91"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/chat-context.ts": "7b23e49b21c73fb4bf692405ef84ba2688c3c033d2d56ed5d7204fa0cfb03c2c",
+      "src/server/sessions.ts": "00c96b87c60c0767c5ebc97e6443b42f01b5c4d9bb1666ea5e3f1cdd02df8222",
+      "src/server/sse.ts": "06616c0a960668b78d1ec7ade8a6956159d621662f22d1e7258a0f2cd3f54dc5"
+    }
+  },
+  "sources": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Claude Sonnet5.5 independent state/runtime reviews; manifest e05dcb2bee72dd631d89d80dfc0b8d45974ba7a449ae71e3825ece978e0cc338; explicit human approval of pack 76a4d70104861c5d231ec3b395a80fba7e99b3123d9f235f3822f93506f69651; research-extensions remains deferred",
+    "at": "2026-11-08T21:41:33.940Z",
+    "artifacts": {
+      ".sdd/specs/sources.md": "0e81aa19898faab4723fb38e3d55d34a0090e6154525fe806d54756efafbb9d6"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/components/source-reference.tsx": "c7416d2b1170b1563b518ae2410293fbb8ea3af3dc3c83289ad63103a9a084d0",
+      "src/server/chat-context.ts": "e1379fe6b727c824314a985a12fa1fc90490fbae7d116e8dc09b8a62357a2d0a",
+      "src/server/confirmations.ts": "b1ef450c53fc991f8624e170e6d54bfdf0e5aeeb3da456663bf6235ba397c78b",
+      "src/server/source-routes.ts": "5bd51521d57401489cde8c4fcea85938b6258d5403df0315b9814be63d1c5e4d",
+      "src/server/sources.ts": "9e32a13843e7bb0a78a02d5005e062f434b063126052026315f32a58a5a6ff03"
+    }
+  },
+  "workspace": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "User explicitly approved rich design v2 and the semantics-identical v3 heading/plan-hash correction; artifactSha256 fde60cbc737a68b24181a8accbac74a1296276fdcd3ae2eca25a60eadb9f5c04;10 exact paths shown; Sonnet5.5 blockers resolved; no release approval.",
+    "at": "2026-11-11T19:29:03.967Z",
+    "artifacts": {
+      ".sdd/specs/workspace.md": "55a0e0cff24a05c28cddb848e44caae7e0ada927a8a85ee4f74f3d3e7c13f43f"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/components/chat-panel.tsx": "ed3797494f602d67783acd4ca622db6ca9d7a1941c177727d6ff1c678db8b6e0",
+      "src/components/confirmation-panel.tsx": "3ea869619eee7c60c81a0ff4f363611c3a3b131a05467f613b4eb5e6488245c4",
+      "src/components/files-panel.tsx": "a826e476bb2045d8ad60b7f2b16c30d6486182a3bdf10f5f4540a9030c9be41f",
+      "src/components/notebook-editor.tsx": "382f27267928771f4ee94cfd9174e432ea99d0ffbab53517942156581a11820a",
+      "src/components/scientific-view.tsx": "3bb6e0eb8bf5926cbe8a3775dd582da52a8cacb61fdac3ddf4554cb99b7b38a6",
+      "src/components/workspace.tsx": "14afdd6a3c3325018a8db5d7ccc2877b604d08f46702eaada057801fdb7f6383",
+      "src/server/application.ts": "44db9986c7604f504ef08ea0dde53d488122fbf03bc9fe68e9a8fc05d6ab473f"
+    }
+  },
+  "trusted-lan": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Explicit approval of6105a7ee3249819de7d554b65970e6c994e5ee25372adfcbf0892de45367bfac through native ask_user; user-local pinned Nginx exact LAN listener, loopback app, private lifecycle, no other services/firewall/IP changes",
+    "at": "2026-11-10T05:31:59.869Z",
+    "artifacts": {
+      ".sdd/specs/trusted-lan.md": "6105a7ee3249819de7d554b65970e6c994e5ee25372adfcbf0892de45367bfac"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "scripts/nginx.ts": "0e7f60872a8662614959cc226ff56e07de5cf6717b9acaca89513aa4806431cc",
+      "src/server/nginx.ts": "0b120183db57a52e94ae161052ffa32fa67b34dc1f1d9b6e85283cdd9eea112b",
+      "src/server/trusted-lan.ts": "e5cd9652b7c722f2a979bcc66eec4db166f9744fc61c11fe576ee7d7cbfb5336"
+    }
+  },
+  "project-visibility": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Independent Claude Sonnet5.5 candidate6 contract ready; explicit exact-spec user response approve-ten-exact-specifications; implementation/qualification pending",
+    "at": "2026-11-11T06:44:06.490Z",
+    "artifacts": {
+      ".sdd/specs/project-visibility.md": "8c2a0b3e7fbd3fd3c1c402fe2a77c867bfeeb2e3191760d27e1c540d4bafb24c"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/operations.ts": "7dbfb1f551f70919fb21faa754adb54429e5856303050f01432bbe5064950ed7",
+      "src/server/project-routes.ts": "b1f6c01c51043b03a53fe5e85944675d1f5f9294bb75a5a0a0686a2014529479",
+      "src/server/project-scope.ts": "4f40e9f59a258860e02bf50a8c6fac9b2f16c788de234d44d9884408c6462622",
+      "src/server/projects.ts": "e1f9821bb376e5f77c07b547371b781f1df4fdf76c0109fafb992c9d6cb2ec86",
+      "src/server/research-checks.ts": "1ff807c6befddb0995e6e14b920f1c946f4f944bf8d2a355a5fca774726e44d4"
+    }
+  },
+  "integration-catalog": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "Explicit six-file approval; pinned203 Skills/ToolUniverse settings-only, no execution; independent spec review clean",
+    "at": "2026-11-10T13:20:15.230Z",
+    "artifacts": {
+      ".sdd/specs/integration-catalog.md": "f7950d2e65570d8a7a6241f7e7e5c7fd36781479a02e99e1599bbd11c4a212cd"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/server/integration-catalog.ts": "bb6b9ae2b1e7f91ac0969a6c3b4a224d5fa043daed8c6324524dfa5e29e4c072",
+      "src/server/integration-routes.ts": "403a435c8ebea02f9f92cf511b73e4186836d6798fe427e9a23b9d68950c3702"
+    }
+  },
+  "workspace-layout": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "User explicitly approved rich design v2 and the semantics-identical v3 heading/plan-hash correction; artifactSha256 fde60cbc737a68b24181a8accbac74a1296276fdcd3ae2eca25a60eadb9f5c04;10 exact paths shown; Sonnet5.5 blockers resolved; no release approval.",
+    "at": "2026-11-11T19:28:59.946Z",
+    "artifacts": {
+      ".sdd/specs/workspace-layout.md": "91a67add9510344eb7552333df326a0a1e124e98573f98d62dce0570b0df6bc6"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/components/appearance.tsx": "501bfaa720d6d14314b35fa98c128a7e5d1f29451e0199bc5fc41efec180897e",
+      "src/components/workspace-settings.tsx": "a888d19e313ea76a470519b898c2e40c3f352397c30568f6468bc51b3d9ed644",
+      "src/components/workspace.tsx": "14afdd6a3c3325018a8db5d7ccc2877b604d08f46702eaada057801fdb7f6383"
+    }
+  },
+  "notebook-history": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "User explicitly approved rich design v2 and the semantics-identical v3 heading/plan-hash correction; artifactSha256 fde60cbc737a68b24181a8accbac74a1296276fdcd3ae2eca25a60eadb9f5c04;10 exact paths shown; Sonnet5.5 blockers resolved; no release approval.",
+    "at": "2026-11-11T19:29:08.033Z",
+    "artifacts": {
+      ".sdd/specs/notebook-history.md": "df6e9bd530a0d7c89a378206d2192e3c4545866877cffbc9251d31ec802f1f53"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "scripts/migrate.ts": "7d97b3c3776a510b34afaa8c3a990d44e0d7bba0247e9d3ff71124cd333d117b",
+      "scripts/restore-validation.ts": "bc1a35ef44c675dcd5e2f1f8caac5d051c22d2f8d3a44021f231da5f95103189",
+      "src/components/notebook-history.tsx": "4c5d3f158cd20b2425e3a69ed50f4617290770d6f4fb9b3f1ab4946537d7f7e7",
+      "src/server/notebook-git.ts": "a10e8d4a3aee6e30a2c4c9e9caa8b9579e0c0a63d0a5e1d345557b33d0f2ccf1",
+      "src/server/notebook-routes.ts": "b6d004e15639b69e78e31c652539d4c52920305de1a2b527d94ec866a823800a",
+      "src/server/notebook-versions.ts": "afffc73df80ea2f0e154200aafdd4f3c0dde146c5776ee64f491d84af9a82046",
+      "src/server/notebooks.ts": "4a3320581670c9c3aa793f40b046495b88c43ed63d39d0c45139b3ff9391d76c",
+      "src/server/proposals.ts": "d0d8265dbb5010cabb46c3850e8bc21e8178fcd167b24d919b5abf9c8a42308b"
+    }
+  },
+  "markdown-authoring": {
+    "by": "nahisaho",
+    "kind": "human",
+    "review": "User explicitly approved rich design v2 and the semantics-identical v3 heading/plan-hash correction; artifactSha256 fde60cbc737a68b24181a8accbac74a1296276fdcd3ae2eca25a60eadb9f5c04;10 exact paths shown; Sonnet5.5 blockers resolved; no release approval.",
+    "at": "2026-11-11T19:28:57.929Z",
+    "artifacts": {
+      ".sdd/specs/markdown-authoring.md": "07f70114710d97d7d7e16b99411c36c2969a4d4d35f143510cfd067dfb0e72e5"
+    },
+    "tier": "T2",
+    "requireHuman": true,
+    "code": {
+      "src/components/appearance.tsx": "501bfaa720d6d14314b35fa98c128a7e5d1f29451e0199bc5fc41efec180897e",
+      "src/components/journal-markdown-editor.tsx": "a752618cc38d977bca0791c47a4913cf2ebf0ee6c0c458f8453e505a8b8532fa",
+      "src/components/notebook-editor.tsx": "e90d50a5be453beaf25151563c8ade4197b0d07f755dce162d692c6a2ab2e3a8",
+      "src/components/workspace-settings.tsx": "a888d19e313ea76a470519b898c2e40c3f352397c30568f6468bc51b3d9ed644",
+      "src/lib/journal-markdown.ts": "9c078b39a26c9f63d10e2de457fefae6eb869186c7770d2bd044750a1ace79f4",
+      "src/lib/markdown-metadata.ts": "5d9c8e21fa80847bbc5d79d856893e87176905f61974fef941c7d2704f311962"
+    }
+  }
+}

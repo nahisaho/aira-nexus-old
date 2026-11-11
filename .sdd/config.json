@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "testCmd": [
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-name-pattern",
+    "{id}(?![0-9A-Za-z])",
+    "{file}"
+  ],
+  "prepare": {
+    "cmd": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "outputs": [],
+    "timeoutMs": 1800000
+  },
+  "checks": [
+    {
+      "name": "typecheck",
+      "cmd": [
+        "npm",
+        "run",
+        "typecheck"
+      ]
+    },
+    {
+      "name": "lint",
+      "cmd": [
+        "npm",
+        "run",
+        "lint"
+      ]
+    },
+    {
+      "name": "test",
+      "timeoutMs": 600000,
+      "cmd": [
+        "npm",
+        "run",
+        "test"
+      ]
+    }
+  ],
+  "timeoutMs": 120000,
+  "scan": {
+    "include": ["src/**", "test/**", "scripts/**", "runtime/**"],
+    "exclude": [".github/**", "node_modules/**", ".scratch/**", ".next/**"]
+  },
+  "scopePolicy": "strict",
+  "planning": {
+    "required": true
+  }
+}

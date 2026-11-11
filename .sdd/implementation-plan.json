@@ -1,0 +1,1987 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "id": "operations",
+      "dependsOn": []
+    },
+    {
+      "id": "sessions",
+      "dependsOn": [
+        "operations"
+      ]
+    },
+    {
+      "id": "projects",
+      "dependsOn": [
+        "sessions"
+      ]
+    },
+    {
+      "id": "data",
+      "dependsOn": [
+        "projects"
+      ]
+    },
+    {
+      "id": "provenance",
+      "dependsOn": [
+        "data",
+        "operations"
+      ]
+    },
+    {
+      "id": "notebook",
+      "dependsOn": [
+        "provenance",
+        "sessions"
+      ]
+    },
+    {
+      "id": "proposals",
+      "dependsOn": [
+        "notebook",
+        "data",
+        "operations"
+      ]
+    },
+    {
+      "id": "runner",
+      "dependsOn": [
+        "proposals",
+        "notebook",
+        "data",
+        "provenance",
+        "operations"
+      ]
+    },
+    {
+      "id": "chat",
+      "dependsOn": [
+        "proposals",
+        "sessions",
+        "data",
+        "provenance",
+        "operations"
+      ]
+    },
+    {
+      "id": "exchange",
+      "dependsOn": [
+        "notebook",
+        "runner",
+        "data",
+        "provenance"
+      ]
+    },
+    {
+      "id": "scientific-rendering",
+      "dependsOn": [
+        "operations",
+        "data"
+      ]
+    },
+    {
+      "id": "sources",
+      "dependsOn": [
+        "chat",
+        "provenance",
+        "data",
+        "scientific-rendering"
+      ]
+    },
+    {
+      "id": "research-checks",
+      "dependsOn": [
+        "sources",
+        "provenance",
+        "operations"
+      ]
+    },
+    {
+      "id": "diagnostics",
+      "dependsOn": [
+        "operations",
+        "chat",
+        "runner",
+        "data",
+        "provenance",
+        "notebook",
+        "proposals",
+        "exchange",
+        "sources",
+        "research-checks"
+      ]
+    },
+    {
+      "id": "workspace",
+      "dependsOn": [
+        "projects",
+        "chat",
+        "notebook",
+        "runner",
+        "data",
+        "exchange",
+        "scientific-rendering",
+        "sources",
+        "research-checks",
+        "diagnostics"
+      ]
+    },
+    {
+      "id": "research-extensions",
+      "dependsOn": []
+    },
+    {
+      "id": "trusted-lan",
+      "dependsOn": [
+        "workspace"
+      ]
+    },
+    {
+      "id": "project-visibility",
+      "dependsOn": [
+        "projects",
+        "notebook",
+        "research-checks"
+      ]
+    },
+    {
+      "id": "integration-catalog",
+      "dependsOn": [
+        "project-visibility"
+      ]
+    },
+    {
+      "id": "workspace-layout",
+      "dependsOn": [
+        "workspace",
+        "integration-catalog",
+        "markdown-authoring"
+      ]
+    },
+    {
+      "id": "markdown-authoring",
+      "dependsOn": [
+        "workspace",
+        "scientific-rendering"
+      ]
+    },
+    {
+      "id": "notebook-history",
+      "dependsOn": [
+        "markdown-authoring",
+        "notebook",
+        "proposals",
+        "data",
+        "diagnostics"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "operations",
+      "feature": "operations",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-OPS-001",
+        "REQ-OPS-002",
+        "REQ-OPS-003"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        ".gitignore",
+        "package.json",
+        "package-lock.json",
+        "tsconfig.json",
+        "next-env.d.ts",
+        "next.config.ts",
+        "eslint.config.mjs",
+        "src/app/layout.tsx",
+        "src/app/page.tsx",
+        "src/app/api/[...path]/route.ts",
+        "src/server/http.ts",
+        "src/server/database.ts",
+        "src/server/db-container.ts",
+        "src/server/credentials.ts",
+        "src/server/owned-containers.ts",
+        "src/server/operations.ts",
+        "src/server/migrations/001-operations.sql",
+        "src/server/migrations/008-runtime.sql",
+        "scripts/migrate.ts",
+        "scripts/start.ts",
+        "scripts/stop.ts",
+        "test/operations.test.ts",
+        "test/helpers/database.ts",
+        "test/helpers/containers.ts",
+        "src/server/project-scope.ts",
+        "src/server/migrations/002-project-jobs.sql",
+        "src/server/migrations/004-provenance.sql",
+        "src/server/migrations/009-exchange.sql"
+      ],
+      "condition": "Real private PostgreSQL startup/roles/lease, durable purpose-bound job receipts and epoch-fenced terminal states satisfy all OPS PASS/counterexamples; exact owned cleanup, lease loss, cancellation races and no replay are tested. Initial application wiring reports unavailable features explicitly, never full readiness. Genuine assertion Red/Green and restored mechanism mutations exist before verification.",
+      "tests": [
+        "TEST-OPS-001",
+        "TEST-OPS-002",
+        "TEST-OPS-003"
+      ],
+      "checks": [
+        {
+          "name": "operations-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/operations.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/operations.md": "8fcdf9e979c79189d6c6ccd301d43db90fbea7496db69608524d899df2c35fcc"
+      },
+      "dependencies": {},
+      "status": "complete",
+      "receipt": ".sdd/plan-evidence/74de07c4e919534b1b460e3465bb216ce0cc2bd458e42abaf0f22448da08d063/c9a0c2ec5dbc18163ad4228d8e95a7ee04fca6b2b4860a4bf1789aa07d2b9bf0.json"
+    },
+    {
+      "id": "sessions",
+      "feature": "sessions",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-SESSION-001",
+        "REQ-SESSION-002",
+        "REQ-SESSION-003"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/operations.ts",
+        "scripts/migrate.ts",
+        "src/server/sessions.ts",
+        "src/server/chat-context.ts",
+        "src/server/sse.ts",
+        "src/server/migrations/002-project-chat.sql",
+        "test/sessions.test.ts",
+        "src/server/project-scope.ts",
+        "src/server/migrations/002-project-jobs.sql"
+      ],
+      "condition": "Every project creation path atomically creates exactly one immutable chat; unique/composite constraints, rollback/concurrency/title/history and no independent deletion are verified. SSE follows durable terminal truth; bounded history/excerpts disclose omissions and never read research bytes implicitly. Genuine native TDD and restored mutations exist.",
+      "tests": [
+        "TEST-SESSION-001",
+        "TEST-SESSION-002",
+        "TEST-SESSION-003"
+      ],
+      "checks": [
+        {
+          "name": "sessions-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/sessions.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/sessions.md": "c62d2f47868c216561f512c1d7cdf40872d870d2827a2c5a938f2cea4585ed91"
+      },
+      "dependencies": {
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934"
+      },
+      "status": "complete",
+      "receipt": ".sdd/plan-evidence/1225ae6c1ae69dcb4ee4781b703e12206f3b549cd3ca151070a8d8d8f371dd71/f988caacf3c3f7e418f125f4b49bc1411b74bdfe278fbfc3a65469d3605864ab.json"
+    },
+    {
+      "id": "projects",
+      "feature": "projects",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-PROJECT-001",
+        "REQ-PROJECT-002",
+        "REQ-PROJECT-003",
+        "REQ-PROJECT-004",
+        "REQ-PROJECT-005",
+        "REQ-PROJECT-006"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/projects.ts",
+        "src/server/local-boundary.ts",
+        "src/server/project-routes.ts",
+        "test/projects.test.ts",
+        "src/server/project-scope.ts",
+        "src/server/migrations/012-project-navigation.sql",
+        "src/server/migrations/002-project-jobs.sql",
+        "src/server/operations.ts",
+        "src/server/sessions.ts",
+        "scripts/migrate.ts",
+        "src/server/trusted-lan.ts",
+        "test/helpers/nginx.ts"
+      ],
+      "condition": "Real owned project create/edit/archive/reload and both archive-admission race orders satisfy field/revision/status contracts; malformed/foreign scope, Host/Origin/body, CORS/resource/framing controls are verified without OS-authentication claims. Native assertion Red/Green and isolated restored policy mutations exist.",
+      "tests": [
+        "TEST-PROJECT-001",
+        "TEST-PROJECT-002",
+        "TEST-PROJECT-003",
+        "TEST-PROJECT-004",
+        "TEST-PROJECT-005",
+        "TEST-PROJECT-006",
+        "TEST-PROJECT-007"
+      ],
+      "checks": [
+        {
+          "name": "projects-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/projects.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/projects.md": "64135a18b436f55662bdea82d033f6f58977c9f3200cc8cbf5cd1fdaf26d3fa9"
+      },
+      "dependencies": {
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "in-progress",
+      "receipt": ".sdd/plan-evidence/2577c0f557b2e4b591e9587374c6330c9c64de8017d5a848a682a135251a6f6f/4a81c12f9bcb427702378ec055c6e2ba7166495a0684aadaa5be17469568c608.json"
+    },
+    {
+      "id": "data",
+      "feature": "data",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-DATA-001",
+        "REQ-DATA-002",
+        "REQ-DATA-003",
+        "REQ-DATA-004"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/files.ts",
+        "src/server/file-storage.ts",
+        "src/server/file-routes.ts",
+        "src/server/file-preview.ts",
+        "src/server/svg-preview.ts",
+        "src/server/migrations/003-files.sql",
+        "test/data.test.ts",
+        "test/helpers/browser.ts",
+        "scripts/migrate.ts",
+        "src/server/local-boundary.ts",
+        "package.json",
+        "package-lock.json",
+        "src/server/migrations/004-provenance.sql"
+      ],
+      "condition": "Actual100MiB upload/download and256MiB selection satisfy exact hashes/ownership/quota reservation and partial-publication controls; validated bounded raster/text previews and attachment-only octet-stream/nosniff downloads pass hostile browser tests. No inline medium-file SDK transport; genuine native TDD and restored mutations exist.",
+      "tests": [
+        "TEST-DATA-001",
+        "TEST-DATA-002",
+        "TEST-DATA-003",
+        "TEST-DATA-004",
+        "TEST-DATA-005",
+        "TEST-LAYOUT-007"
+      ],
+      "checks": [
+        {
+          "name": "data-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/data.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/data.md": "b637b817cdfd279e96785fcee9214c5a35a90364920a7984fb78c4511c6c671d"
+      },
+      "dependencies": {
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "in-progress",
+      "receipt": ".sdd/plan-evidence/3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7/557905c22bea38daf4358a14adedb4de930daa4e4a186528006587d6a214e11d.json"
+    },
+    {
+      "id": "provenance",
+      "feature": "provenance",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-PROV-001",
+        "REQ-PROV-002",
+        "REQ-PROV-003"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/provenance.ts",
+        "src/server/run-snapshots.ts",
+        "src/server/migrations/004-provenance.sql",
+        "src/server/migrations/005-notebooks.sql",
+        "test/provenance.test.ts",
+        "scripts/migrate.ts",
+        "src/server/files.ts",
+        "src/server/operations.ts",
+        "src/server/chat-context.ts",
+        "src/server/sessions.ts"
+      ],
+      "condition": "Immutable observed source/input/environment/run/version records survive edits/restart; verified blob bytes precede fenced transactional publication, orphan/partial bytes never become visible, and failed/stale origins remain truthful. Snapshot/commit crash controls and native Red/Green/restored mutations verify observation rather than scientific validity.",
+      "tests": [
+        "TEST-PROV-001",
+        "TEST-PROV-002",
+        "TEST-PROV-003"
+      ],
+      "checks": [
+        {
+          "name": "provenance-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/provenance.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/provenance.md": "6e572672a7f1cd087f5bc5ea7afff89abccf98404e7051de26243cfc5a0ad80f"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/96d815328a42cb4ef89d5e0b7a1df6be43b484832c83a7b4596d8402c7c0b12b/8f2e3ceba664a4871530680d172a9c16a77179d1bf36f274223e19d1cefe1acd.json"
+    },
+    {
+      "id": "notebook",
+      "feature": "notebook",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-NOTE-001",
+        "REQ-NOTE-002",
+        "REQ-NOTE-003",
+        "REQ-NOTE-004",
+        "REQ-NOTE-005",
+        "REQ-NOTE-006"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/notebooks.ts",
+        "src/server/notebook-routes.ts",
+        "src/server/migrations/005-notebooks.sql",
+        "src/server/migrations/014-project-lab-note.sql",
+        "src/server/application.ts",
+        "scripts/backup.ts",
+        "scripts/restore-validation.ts",
+        "test/notebook.test.ts",
+        "src/server/run-snapshots.ts",
+        "src/server/provenance.ts",
+        "scripts/migrate.ts"
+      ],
+      "condition": "Owned bounded Python/R ipynb and optimistic saves remain intact. Each project/chat commit atomically creates exactly one separate Markdown-only Lab Note, initial version and Git intent. Existing projects gain an empty journal without rewriting research; associations are immutable to the app, reads are scoped and side-effect-free, rejected writes/rollback leave no history. Actual native Red/Green, preserved core notebook regressions and restored journal uniqueness/type/migration mutations are required; new contract evidence pending.",
+      "tests": [
+        "TEST-NOTE-001",
+        "TEST-NOTE-002",
+        "TEST-NOTE-003",
+        "TEST-NOTE-004",
+        "TEST-NOTE-005",
+        "TEST-NOTE-006"
+      ],
+      "checks": [
+        {
+          "name": "notebook-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/notebook.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/notebook.md": "77a385ee5d5fb7c178f3d00aef03561208239ac0199906c60def6c7edd1959c2"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/b53bcf919f24746d72094b8b86c0325cf40723d3d63240705db51a27b261bc96/3320fc9e2ae0d6b603d07d1461ec3bc0daacc22f8f2287ccd8121b36e27afe36.json"
+    },
+    {
+      "id": "proposals",
+      "feature": "proposals",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-PROP-001",
+        "REQ-PROP-002",
+        "REQ-PROP-003",
+        "REQ-PROP-004"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/proposals.ts",
+        "src/server/confirmations.ts",
+        "src/server/proposal-routes.ts",
+        "src/server/migrations/006-proposals.sql",
+        "test/proposals.test.ts",
+        "src/server/operations.ts",
+        "scripts/migrate.ts"
+      ],
+      "condition": "Pending typed changes remain inert; acceptance and server-captured purpose-bound five-minute one-use execution/disclosure snapshots use current ownership/revisions. Actual PostgreSQL grant/job/receipt atomicity, rollback, expiry/edit/archive replay and exact32KiB outbound bytes satisfy all PASS/counterexamples with genuine native TDD/restored mutations.",
+      "tests": [
+        "TEST-PROP-001",
+        "TEST-PROP-002",
+        "TEST-PROP-003",
+        "TEST-PROP-004"
+      ],
+      "checks": [
+        {
+          "name": "proposals-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/proposals.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/proposals.md": "a7ed130604ee6e002b404b3cd5a690ab59fa20c2abe5dde59a1c42ae3ac6f0ff"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/c0cbf0fbcaf64c0b201506063e2b6b12b9999482a61de6d6078321000fafdf76/2a25f99e5dae3bc4a888a226586efbb099491b6dca512a407ce181a1175cfc2e.json"
+    },
+    {
+      "id": "runner",
+      "feature": "runner",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-RUN-001",
+        "REQ-RUN-002",
+        "REQ-RUN-003",
+        "REQ-RUN-004"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "runtime/Dockerfile",
+        "runtime/requirements.txt",
+        "runtime/worker.py",
+        "runtime/typed_bridge.py",
+        "runtime/protocol.py",
+        "src/server/runtime.ts",
+        "src/server/transfers.ts",
+        "test/runner.test.ts",
+        "src/server/confirmations.ts",
+        "src/server/migrations/006-proposals.sql",
+        "src/server/migrations/008-runtime.sql",
+        "src/server/operations.ts",
+        "scripts/migrate.ts",
+        "test/helpers/bridge-contract.py"
+      ],
+      "condition": "Actual confirmed network-none/nonroot/read-only kernels enforce resource/time/frame/file budgets, guarded native Python/R dtype/NA/precision subset, chunk/final integrity and exact-ID invalidation/cleanup. Serialize each notebook's active run THROUGH terminal publication AND source-checked Notebook projection before releasing its busy state, including stale409 and failed/cancelled/timeout/interrupted paths; actual overlap/deferred-completion tests must pin this integration prerequisite, not assume a single runner per cell. Preserve tested block/mask behavior; supported capacity is not arbitrary-workload success. Native Red/Green and isolated restored conversion/transport/isolation mutations exist.",
+      "tests": [
+        "TEST-RUN-001",
+        "TEST-RUN-002",
+        "TEST-RUN-003",
+        "TEST-RUN-004"
+      ],
+      "checks": [
+        {
+          "name": "runner-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/runner.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/runner.md": "bbc04298af2595bc637a46e817dab4b741076bee80d2d45a3b92aeee1c1a2cf0"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/527aa9f431539da8e151d5434d1d5e611d973f601d8e970790882624554146b0/5dfa3087bddf010d5f00455e887eceb9a4318632ce996b30022ae6a95f224c98.json"
+    },
+    {
+      "id": "chat",
+      "feature": "chat",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-CHAT-001",
+        "REQ-CHAT-002",
+        "REQ-CHAT-003",
+        "REQ-CHAT-004"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/copilot.ts",
+        "src/server/chat.ts",
+        "src/server/chat-routes.ts",
+        "src/server/copilot-tools.ts",
+        "test/chat.test.ts",
+        "test/helpers/copilot.ts"
+      ],
+      "condition": "Fresh isolated actual SDK adapter uses existing server-side credentials, bounded owned context and explicit safe tools without host/Skills/MCP authority. Controlled failures/tool boundaries and separate live synthetic SDK proof verify truthful durable turns,120s failures and safe1MiB save_file. No fake production transport; native TDD/restored permission/disclosure mutations exist.",
+      "tests": [
+        "TEST-CHAT-001",
+        "TEST-CHAT-002",
+        "TEST-CHAT-003",
+        "TEST-CHAT-004"
+      ],
+      "checks": [
+        {
+          "name": "chat-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/chat.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/chat.md": "91402e6725b38564729ce3b2e59deb1dd2de46059080a69b8a06a800bddee409"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/31e06f7d89feb99a0e6c0affe198748c3bb5bef5e3cc92d95cb9e996197d3fc3/d5984d4e1da946187ddcf8ac2ee320bcabd151530eaa5d783f58e896b6aed8a2.json"
+    },
+    {
+      "id": "exchange",
+      "feature": "exchange",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-XCH-001",
+        "REQ-XCH-002"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/exchange.ts",
+        "src/server/exchange-routes.ts",
+        "runtime/notebook_exchange.py",
+        "test/exchange.test.ts",
+        "test/helpers/jupyter.ts",
+        "src/server/notebooks.ts",
+        "src/server/migrations/009-exchange.sql",
+        "src/server/notebook-routes.ts",
+        "scripts/migrate.ts"
+      ],
+      "condition": "Strict inert import/versioned exact wrappers preserve cells/IDs/languages/sharing, attachments and inert generated history within budgets; export exceeding importable limits refuses without truncation. Real fresh standalone Jupyter execution/reimport roundtrip with guarded types and dependencies passes; native TDD/restored schema/history/bridge mutations exist.",
+      "tests": [
+        "TEST-XCH-001",
+        "TEST-XCH-002"
+      ],
+      "checks": [
+        {
+          "name": "exchange-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/exchange.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/exchange.md": "330e2b99624fdb7fd888a2ad73bd3510ebc13161f5b0a193c580e793610efcdd"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/ab27b729d9cc4cb1c00960700446924159e9298d0f952aee3d55408b8e0b1b71/c44dc523fc7a42db3e8ef3e338676cd501b192c66ba7a863aac6acff6d302dff.json"
+    },
+    {
+      "id": "scientific-rendering",
+      "feature": "scientific-rendering",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-RENDER-001",
+        "REQ-RENDER-002",
+        "REQ-RENDER-003",
+        "REQ-RENDER-004",
+        "REQ-RENDER-005",
+        "REQ-RENDER-006"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "package.json",
+        "package-lock.json",
+        "src/server/scientific-rendering.ts",
+        "src/server/math-worker.ts",
+        "src/components/scientific-text.tsx",
+        "src/components/scientific-html.tsx",
+        "test/scientific-rendering.test.ts"
+      ],
+      "condition": "Default scientific display and explicit file/cell source modes preserve stored source, literal HTML and scalar-safe omissions; bounded workers produce sanitized MathML with visible errors. Owned image routes and local inert Mermaid display enforce scoped content and resource limits without external media/tool/evidence requests. Current native TDD and restored markup/budget/network mutations are required, not historical UI reports.",
+      "tests": [
+        "TEST-LAYOUT-007",
+        "TEST-LAYOUT-008",
+        "TEST-LAYOUT-009",
+        "TEST-RENDER-001",
+        "TEST-RENDER-002",
+        "TEST-RENDER-003",
+        "TEST-RENDER-004"
+      ],
+      "checks": [
+        {
+          "name": "rendering-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/scientific-rendering.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/scientific-rendering.md": "dd43351373ba89d3d5294b9bed6d64e6ab881421617b69aa1f1cc1af0273e5dc"
+      },
+      "dependencies": {
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/6a05f9431786705f23a9fef84874f1c25385d9009f3489f4eecf44533bbcf227/483401060ce1a52658d54c168e2a82156cbe1e73c60afcaf1ccd866e949949ae.json"
+    },
+    {
+      "id": "sources",
+      "feature": "sources",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-CITE-001",
+        "REQ-CITE-002",
+        "REQ-CITE-003"
+      ],
+      "dependsOn": [
+        "runner"
+      ],
+      "artifacts": [
+        "src/server/sources.ts",
+        "src/server/source-routes.ts",
+        "src/components/source-reference.tsx",
+        "src/server/chat-context.ts",
+        "src/server/confirmations.ts",
+        "test/sources.test.ts"
+      ],
+      "condition": "Click/copy-only scoped immutable run/version resolver returns exact historical metadata and safe previews; malformed/foreign/unavailable identities never disclose or invent native evidence. Browser/context tests prove no ambient lookup or SDK expansion, and exact-payload consent remains mandatory; native TDD/restored ownership/context mutations exist.",
+      "tests": [
+        "TEST-CITE-001",
+        "TEST-CITE-002",
+        "TEST-CITE-003"
+      ],
+      "checks": [
+        {
+          "name": "sources-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/sources.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/sources.md": "0e81aa19898faab4723fb38e3d55d34a0090e6154525fe806d54756efafbb9d6"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/878a52fc5ff6a57d50b7b870aa51637a3dfd38fc22352a39f95a3c292eb976d5/f22c5490cb0bb46b0f180d729b3ff99f55221a292c0baae6aceab93d39ecef43.json"
+    },
+    {
+      "id": "research-checks",
+      "feature": "research-checks",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-CHECK-001",
+        "REQ-CHECK-002",
+        "REQ-CHECK-003",
+        "REQ-CHECK-004"
+      ],
+      "dependsOn": [
+        "exchange"
+      ],
+      "artifacts": [
+        "src/server/research-checks.ts",
+        "src/server/check-routes.ts",
+        "src/server/migrations/007-checks.sql",
+        "test/research-checks.test.ts",
+        "src/server/operations.ts",
+        "scripts/migrate.ts"
+      ],
+      "condition": "Server-owned captured snapshots drive bounded disclosed numeric/location/linkage/evidence/seed heuristics; no scientific-grade/source/code/LLM effects. Actual PostgreSQL purpose=check admission and one immutable report/receipt satisfy replay/edit/archive/fence/ownership/version tests with genuine native TDD and restored authority/verdict/idempotency mutations.",
+      "tests": [
+        "TEST-CHECK-001",
+        "TEST-CHECK-002",
+        "TEST-CHECK-003",
+        "TEST-CHECK-004"
+      ],
+      "checks": [
+        {
+          "name": "checks-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/research-checks.test.ts"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/research-checks.md": "4cf6803eb78ad555221be14e474c9bbb2349f1e61046690a5efc26a59edd4cbe"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/c634d43e5d7c0551f7742a58a6581e9648ea3824454604b577bd552f5719594b/d0bf537161b712bd2b11de7941a04fb30b6f91a021ddfa5c85ee0aa8fd4b063f.json"
+    },
+    {
+      "id": "diagnostics",
+      "feature": "diagnostics",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-DIAG-001",
+        "REQ-DIAG-002",
+        "REQ-DIAG-003"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/server/diagnostics.ts",
+        "src/server/diagnostic-routes.ts",
+        "src/server/events.ts",
+        "scripts/backup.ts",
+        "scripts/restore-validation.ts",
+        "README.md",
+        "test/diagnostics.test.ts"
+      ],
+      "condition": "Actual DB socket/role/lease and CLI/auth/Docker/image readiness reports actionable redacted facts; no prompt/content/credential sentinel leaks. Quiescent DB-plus-blob backup restores only into independent empty data/storage with exact hashes/relations/chats and inert historical authority; original state stays untouched. Documented commands and native TDD/restored redaction/restore mutations pass.",
+      "tests": [
+        "TEST-DIAG-001",
+        "TEST-DIAG-002",
+        "TEST-DIAG-003"
+      ],
+      "checks": [
+        {
+          "name": "diagnostics-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/diagnostics.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/diagnostics.md": "29bd99cfb07bb4127294919614ecbc38001e61449f350fc42c8387fc74723c22"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/8fa78148b702fb4492246c6ccdf5b194f1a4de68b791cae14800c730456f9e67/8e20fc7ed096a4c1304fee0178d98a64322462b831484b86cf61e42a46fb0f9d.json"
+    },
+    {
+      "id": "workspace",
+      "feature": "workspace",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-UI-001",
+        "REQ-UI-002",
+        "REQ-UI-003"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        "src/app/layout.tsx",
+        "src/app/page.tsx",
+        "src/app/projects/[projectId]/page.tsx",
+        "src/app/globals.css",
+        "src/components/workspace.tsx",
+        "src/components/notebook-editor.tsx",
+        "src/components/chat-panel.tsx",
+        "src/components/files-panel.tsx",
+        "src/components/confirmation-panel.tsx",
+        "src/server/application.ts",
+        "src/app/api/[...path]/route.ts",
+        "src/components/client-api.ts",
+        "src/components/scientific-view.tsx",
+        "scripts/start.ts",
+        "README.md",
+        "playwright.config.ts",
+        "test/workspace.test.ts",
+        "test/e2e/workspace.spec.ts",
+        "test/helpers/workspace.ts",
+        "test/helpers/workspace-server.ts",
+        "next.config.ts",
+        "src/server/run-snapshots.ts",
+        "src/server/confirmations.ts",
+        "test/helpers/workspace-lifecycle.ts",
+        "test/helpers/startup-signal.ts"
+      ],
+      "condition": "Japanese responsive real-DB single-project-chat workspace wires actual feature services and controlled test SDK transport, not a fake production mode. Exact fresh acceptance/consent, notebook/run/history/file/citation/check flows and inert/error/omission/imported/stale/archive displays pass real browser tests and production build. Required native TDD/restored UI regressions exist before full project gate; no publication authorization.",
+      "tests": [
+        "TEST-LAYOUT-001",
+        "TEST-LAYOUT-002",
+        "TEST-LAYOUT-003",
+        "TEST-LAYOUT-005",
+        "TEST-LAYOUT-011",
+        "TEST-UI-001",
+        "TEST-UI-002",
+        "TEST-UI-003"
+      ],
+      "checks": [
+        {
+          "name": "workspace-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/workspace.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "browser-tests",
+          "argv": [
+            "npm",
+            "run",
+            "test:e2e"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "build",
+          "argv": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "timeoutMs": 600000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/workspace.md": "55a0e0cff24a05c28cddb848e44caae7e0ada927a8a85ee4f74f3d3e7c13f43f"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "diagnostics": "09ea2792fef56f93f5a4370f8cde5cd79751501cc9de90fdde50b3a8b1e69740",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/21a3230e03772a58aff1b3709a9e232850916337e1fba95c434076b6668c6e08/40b5bcec1f24f786a5500f6c27be71fb0006675284a4a910e3d218cfd6604366.json"
+    },
+    {
+      "id": "research-extensions",
+      "feature": "research-extensions",
+      "kind": "documentation",
+      "reqs": [
+        "REQ-EXT-001",
+        "REQ-EXT-002",
+        "REQ-EXT-003",
+        "REQ-EXT-004",
+        "REQ-EXT-005",
+        "REQ-EXT-006",
+        "REQ-EXT-007",
+        "REQ-EXT-008",
+        "REQ-EXT-009",
+        "REQ-EXT-010",
+        "REQ-EXT-011",
+        "REQ-EXT-012"
+      ],
+      "dependsOn": [],
+      "artifacts": [
+        ".sdd/specs/research-extensions.md"
+      ],
+      "condition": "The approved unchanged specification retains all12 explicit deferred markers and requires new activated contracts/tests/plan before implementation; this task confirms documentation only and implements none of the deferred capabilities.",
+      "tests": [],
+      "checks": [
+        {
+          "name": "deferred-only-scope",
+          "argv": [
+            "node",
+            "--input-type=module",
+            "-e",
+            "import fs from 'node:fs';import assert from 'node:assert/strict';const s=fs.readFileSync('.sdd/specs/research-extensions.md','utf8');const rows=s.split('\\n').filter(x=>/^\\| REQ-EXT-/.test(x));assert.equal(rows.length,12);assert.ok(rows.every(x=>/^\\| REQ-EXT-\\d{3} \\(deferred\\) \\|/.test(x)));assert.ok(s.includes('listed execution/registration features remain deferred'));"
+          ],
+          "timeoutMs": 10000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/research-extensions.md": "d98787b0537e5c8cf5333dafd3cce62609212e5c6556991c7dff775450af3e5e"
+      },
+      "dependencies": {},
+      "status": "complete",
+      "receipt": ".sdd/plan-evidence/a18dcf298929d5300169a41e6cb80c25b82a6f821d483fe06d3751c41cd7ba6c/0de359de9c93e6300c1678e7384c443999a965a36915765c62836e80a189e962.json"
+    },
+    {
+      "id": "trusted-lan",
+      "feature": "trusted-lan",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-LAN-001",
+        "REQ-LAN-002",
+        "REQ-LAN-003"
+      ],
+      "dependsOn": [
+        "workspace"
+      ],
+      "artifacts": [
+        "src/server/trusted-lan.ts",
+        "src/server/nginx.ts",
+        "scripts/nginx.ts",
+        "scripts/start.ts",
+        "src/server/local-boundary.ts",
+        "test/trusted-lan.test.ts",
+        "test/helpers/nginx.ts",
+        "package.json",
+        ".gitignore",
+        "README.md"
+      ],
+      "condition": "Real pinned user-local Nginx serves the unchanged loopback app at the exact assigned private public origin; real UI/assets/API/retained data, same writer, upstream preflight, existing/stale lock refusal and spawned-handle cleanup. Genuine native assertion Reds/Greens for all3 new requirements and changed Projects oracle; explicit canonical/invalid/default/forwarded/peer/streaming/body controls and restored mechanism mutations. No other host services/state/firewall/IP changes.",
+      "tests": [
+        "TEST-LAN-001",
+        "TEST-LAN-002",
+        "TEST-LAN-003"
+      ],
+      "checks": [
+        {
+          "name": "trusted-lan-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/trusted-lan.test.ts"
+          ],
+          "timeoutMs": 180000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/trusted-lan.md": "6105a7ee3249819de7d554b65970e6c994e5ee25372adfcbf0892de45367bfac"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "diagnostics": "09ea2792fef56f93f5a4370f8cde5cd79751501cc9de90fdde50b3a8b1e69740",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1",
+        "workspace": "aa9a576c60ae8fb8c97f7414c8db303076da3be9730699974522a0cb27a136d5"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/fe9ad30654ea076aa67d0a9024ef3b112a9c20166b64bca8d719465687b6f3c6/e401c225e166374ac8e789225bb438f2e253b9ea936142a4f98c45fe34491265.json"
+    },
+    {
+      "id": "project-visibility",
+      "feature": "project-visibility",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-VIS-001",
+        "REQ-VIS-002",
+        "REQ-VIS-003"
+      ],
+      "dependsOn": [
+        "projects",
+        "notebook",
+        "research-checks"
+      ],
+      "artifacts": [
+        "src/server/projects.ts",
+        "src/server/project-scope.ts",
+        "src/server/project-routes.ts",
+        "src/server/operations.ts",
+        "src/server/research-checks.ts",
+        "scripts/migrate.ts",
+        "src/server/migrations/010-project-visibility.sql",
+        "test/project-visibility.test.ts",
+        "test/helpers/project-settings.ts"
+      ],
+      "condition": "Actual retained-data hide/restore, scoped route and admission fences pass against real PostgreSQL, including invalid/foreign/stale/busy/racing controls; native evidence and current receipt required.",
+      "tests": [
+        "TEST-LAYOUT-001",
+        "TEST-VIS-001",
+        "TEST-VIS-002",
+        "TEST-VIS-003"
+      ],
+      "checks": [
+        {
+          "name": "project-visibility-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/project-visibility.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/project-visibility.md": "8c2a0b3e7fbd3fd3c1c402fe2a77c867bfeeb2e3191760d27e1c540d4bafb24c"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/9c52db4284cdd5613f6847065301e29d77d632fbdb17b5e0d09cd2d0ecef5563/c8313f3d7f6ea6344210d1caa4c8c566e286de7b1c7c0f6c6716ba22ffa7a8e1.json"
+    },
+    {
+      "id": "integration-catalog",
+      "feature": "integration-catalog",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-CAT-001",
+        "REQ-CAT-002",
+        "REQ-CAT-003"
+      ],
+      "dependsOn": [
+        "project-visibility"
+      ],
+      "artifacts": [
+        "src/server/integration-catalog.ts",
+        "src/server/integration-routes.ts",
+        "src/server/co-scientist-catalog.json",
+        "src/server/application.ts",
+        "scripts/migrate.ts",
+        "src/server/migrations/011-integration-catalog.sql",
+        "test/integration-catalog.test.ts",
+        "test/helpers/project-settings.ts"
+      ],
+      "condition": "Actual pinned203 Skills/ToolUniverse inert catalog and owner/project settings persistence with independent revision and unchanged SDK deny-default controls; TODOs are planning-only, never evidence.",
+      "tests": [
+        "TEST-CAT-001",
+        "TEST-CAT-002",
+        "TEST-CAT-003"
+      ],
+      "checks": [
+        {
+          "name": "integration-catalog-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/integration-catalog.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/integration-catalog.md": "f7950d2e65570d8a7a6241f7e7e5c7fd36781479a02e99e1599bbd11c4a212cd"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "project-visibility": "fe10a06fde5b0dc2b28abf788b46792b9b75cc8025eb50fcf29d0da33a29a78d",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1"
+      },
+      "status": "blocked",
+      "receipt": ".sdd/plan-evidence/9b5cabfdc98ab16bf63ed1c6f99e46c68232fbb52ecece2aa4e2dced500df11d/3c784234617902d5f129734fb37eb219b175fa157b276a7f9dfbffff2e3d5fd0.json"
+    },
+    {
+      "id": "workspace-layout",
+      "feature": "workspace-layout",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-LAYOUT-001",
+        "REQ-LAYOUT-002",
+        "REQ-LAYOUT-003",
+        "REQ-LAYOUT-004",
+        "REQ-LAYOUT-005",
+        "REQ-LAYOUT-006"
+      ],
+      "dependsOn": [
+        "workspace",
+        "integration-catalog"
+      ],
+      "artifacts": [
+        "src/components/workspace.tsx",
+        "src/components/files-panel.tsx",
+        "src/components/notebook-editor.tsx",
+        "src/components/chat-panel.tsx",
+        "src/components/confirmation-panel.tsx",
+        "src/components/source-reference.tsx",
+        "src/components/scientific-view.tsx",
+        "src/components/client-api.ts",
+        "src/components/messages.ts",
+        "src/components/appearance.tsx",
+        "src/components/modal.tsx",
+        "src/components/workspace-settings.tsx",
+        "src/components/ui/badge.tsx",
+        "src/components/ui/button.tsx",
+        "src/components/ui/input.tsx",
+        "src/components/ui/skeleton.tsx",
+        "src/components/ui/textarea.tsx",
+        "src/components/welcome.tsx",
+        "src/lib/utils.ts",
+        "src/app/globals.css",
+        "src/app/layout.tsx",
+        "test/workspace-layout.test.ts",
+        "test/helpers/workspace.ts",
+        "test/workspace.test.ts"
+      ],
+      "condition": "Real Chromium keeps AI Chat immediately followed by the independent project Lab Note as two always-visible fixed tabs. Multiple ipynb/file viewers remain independently movable/closable only after them; journal/ipynb drafts and scoped dirty/busy/generation guards, themes, locales, mobile, errors and existing confirmations/read-only behavior remain intact. New assertion Red/Green and bounded restored fixed-pair/journal-identity/departure mutations are required.",
+      "tests": [
+        "TEST-LAYOUT-001",
+        "TEST-LAYOUT-002",
+        "TEST-LAYOUT-003",
+        "TEST-LAYOUT-004",
+        "TEST-LAYOUT-005",
+        "TEST-LAYOUT-006",
+        "TEST-LAYOUT-010",
+        "TEST-LAYOUT-011",
+        "TEST-PROJECT-001"
+      ],
+      "checks": [
+        {
+          "name": "workspace-layout-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/workspace-layout.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/workspace-layout.md": "91a67add9510344eb7552333df326a0a1e124e98573f98d62dce0570b0df6bc6"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "diagnostics": "09ea2792fef56f93f5a4370f8cde5cd79751501cc9de90fdde50b3a8b1e69740",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "integration-catalog": "832fe2ba11ac2dc89469488fd92fcb6408b0993b9b6da1630a61f653fb3c2854",
+        "markdown-authoring": "fd2a83ff89c55378c79e0211d113b1d2d5249bde38da887b427473dabdea1763",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "project-visibility": "fe10a06fde5b0dc2b28abf788b46792b9b75cc8025eb50fcf29d0da33a29a78d",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1",
+        "workspace": "aa9a576c60ae8fb8c97f7414c8db303076da3be9730699974522a0cb27a136d5"
+      },
+      "status": "blocked",
+      "receipt": null
+    },
+    {
+      "id": "markdown-authoring",
+      "feature": "markdown-authoring",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-MARKDOWN-001",
+        "REQ-MARKDOWN-002",
+        "REQ-MARKDOWN-003",
+        "REQ-MARKDOWN-004",
+        "REQ-MARKDOWN-005"
+      ],
+      "dependsOn": [
+        "workspace",
+        "scientific-rendering"
+      ],
+      "artifacts": [
+        "src/lib/markdown-metadata.ts",
+        "src/lib/journal-markdown.ts",
+        "src/components/journal-markdown-editor.tsx",
+        "src/components/notebook-editor.tsx",
+        "src/components/files-panel.tsx",
+        "src/components/workspace-settings.tsx",
+        "src/components/appearance.tsx",
+        "src/components/messages.ts",
+        "src/server/math-worker.ts",
+        "tsconfig.json",
+        "package.json",
+        "package-lock.json",
+        "test/markdown-metadata.test.ts",
+        "test/scientific-rendering.test.ts",
+        "test/workspace-layout.test.ts",
+        "test/journal-markdown-ui.test.ts",
+        "test/helpers/workspace.ts",
+        "test/helpers/workspace-server.ts"
+      ],
+      "condition": "Preserve ordinary ipynb modes and portable self-declared YAML. The dedicated journal provides top-level editable Text/direct rendered modes, selection-aware H1/H2/H3/bold/italic/strike and UTC timestamp, immediate supported rendering, exact unedited-source retention and inert advanced previews without a new HTML store or implicit saves. All8 mode/archive/busy rows,12 formatting-selection rows, metadata/advanced-source/paste/IME/save/reload/dirty/history controls require actual assertion-first native tests and restored mutations. Future editor artifacts remain unmeasurable until approved failing stubs/tests exist; no current complete/native-plan admission claim.",
+      "tests": [
+        "TEST-LAYOUT-003",
+        "TEST-LAYOUT-009",
+        "TEST-LAYOUT-012",
+        "TEST-MARKDOWN-001",
+        "TEST-MARKDOWN-002",
+        "TEST-MARKDOWN-003",
+        "TEST-MARKDOWN-004",
+        "TEST-MARKDOWN-005",
+        "TEST-MARKDOWN-006",
+        "TEST-RENDER-005"
+      ],
+      "checks": [
+        {
+          "name": "markdown-authoring-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "--test-name-pattern",
+            "TEST-MARKDOWN-|TEST-RENDER-005|TEST-LAYOUT-003|TEST-LAYOUT-009",
+            "test/markdown-metadata.test.ts",
+            "test/scientific-rendering.test.ts",
+            "test/workspace-layout.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "journal-real-chromium-integration",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "test/journal-markdown-ui.test.ts"
+          ],
+          "timeoutMs": 180000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/markdown-authoring.md": "07f70114710d97d7d7e16b99411c36c2969a4d4d35f143510cfd067dfb0e72e5"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "diagnostics": "09ea2792fef56f93f5a4370f8cde5cd79751501cc9de90fdde50b3a8b1e69740",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1",
+        "workspace": "aa9a576c60ae8fb8c97f7414c8db303076da3be9730699974522a0cb27a136d5"
+      },
+      "status": "blocked",
+      "receipt": null
+    },
+    {
+      "id": "notebook-history",
+      "feature": "notebook-history",
+      "kind": "implementation",
+      "reqs": [
+        "REQ-NH-001",
+        "REQ-NH-002",
+        "REQ-NH-003",
+        "REQ-NH-004",
+        "REQ-NH-005",
+        "REQ-NH-006",
+        "REQ-NH-007"
+      ],
+      "dependsOn": [
+        "markdown-authoring",
+        "notebook",
+        "proposals",
+        "data",
+        "diagnostics"
+      ],
+      "artifacts": [
+        "src/server/notebook-versions.ts",
+        "src/server/notebook-git.ts",
+        "src/server/migrations/013-notebook-history.sql",
+        "src/server/notebooks.ts",
+        "src/server/notebook-routes.ts",
+        "src/server/proposals.ts",
+        "src/server/application.ts",
+        "scripts/migrate.ts",
+        "scripts/restore-validation.ts",
+        "src/components/notebook-history.tsx",
+        "src/components/notebook-editor.tsx",
+        "src/components/messages.ts",
+        "test/notebook-history.test.ts",
+        "test/notebook-git.test.ts",
+        "test/notebook-history-ui.test.ts",
+        "docs/requirements.md",
+        "docs/design.md",
+        "README.md"
+      ],
+      "condition": "Approved REQ-NH-001..007 are implemented with actual assertion Red/Green, valid/refusal controls and restored mechanism mutations: atomically retained source snapshots, honest current-only migration, scoped bounded history/diff, new-revision restore, owned deterministic local Git export, explicit failure/recovery and bilingual inert UI. No research is initialized, silently rewritten, executed or published. Historical prerequisite receipts remain historical until current verification succeeds.",
+      "tests": [
+        "TEST-NH-001",
+        "TEST-NH-002",
+        "TEST-NH-003",
+        "TEST-NH-004",
+        "TEST-NH-005",
+        "TEST-NH-006",
+        "TEST-NH-006-CLOCK",
+        "TEST-NH-006-RESTART",
+        "TEST-NH-006-STOP",
+        "TEST-NH-006-STOP-ONLY",
+        "TEST-NH-007"
+      ],
+      "checks": [
+        {
+          "name": "notebook-history-tests",
+          "argv": [
+            "node",
+            "--import",
+            "tsx",
+            "--test",
+            "--test-concurrency=1",
+            "test/notebook-history.test.ts",
+            "test/notebook-git.test.ts",
+            "test/notebook-history-ui.test.ts"
+          ],
+          "timeoutMs": 600000
+        },
+        {
+          "name": "typecheck",
+          "argv": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "timeoutMs": 120000
+        },
+        {
+          "name": "lint",
+          "argv": [
+            "npm",
+            "run",
+            "lint"
+          ],
+          "timeoutMs": 120000
+        }
+      ],
+      "specs": {
+        ".sdd/specs/notebook-history.md": "df6e9bd530a0d7c89a378206d2192e3c4545866877cffbc9251d31ec802f1f53"
+      },
+      "dependencies": {
+        "chat": "4a86b7383ff7ca5911d0964c95ef1f2f38615cba99b9f8c71135b88f808834dd",
+        "data": "b8b0168dd6e8a441da7dd447904388f73ced71b5d773305093087b35e27803e2",
+        "diagnostics": "09ea2792fef56f93f5a4370f8cde5cd79751501cc9de90fdde50b3a8b1e69740",
+        "exchange": "c5406262c4f5a23c2236d9485bde074d4f45f05a698a40344d27226d2a160ad9",
+        "markdown-authoring": "fd2a83ff89c55378c79e0211d113b1d2d5249bde38da887b427473dabdea1763",
+        "notebook": "621176e70084b01ba534cb27efc2d7e07c81bb5730ce9b82c6143fcd1fbd9b41",
+        "operations": "d1b4f43dc961e16aa724ff763414dd73cc9718cc2788e1e88e3aa52fbea3a934",
+        "projects": "a3729426c2146423fc6534229af3e2883032e35e43f274ed24ae1476d91b3376",
+        "proposals": "7141a5e4faeb3973b46d07dea9b6eece173dd9e51a316416bfecb36ebacae620",
+        "provenance": "edfc363a275e9f8f698c142fb446b89d15318c6de18b044ebbf15f55ae5b3b7d",
+        "research-checks": "c697e6ddfac5ab8b518c31f20c0f0eb625b8e81b4898952888aab1424feeb530",
+        "runner": "d25fc0bf024a274a2eacc4e86caa4032aef50336df789e15d9c13d4e1c373c2b",
+        "scientific-rendering": "4e92d99f60825be34c63a62741b03f75ba85106a94fca4a06cb3b1bcbb3dfd8f",
+        "sessions": "ace22db54cc15e55c19cb4eba75803141fcc03e2bb08d4e26e8fcb8719f3caab",
+        "sources": "900437fd8bf3b037735ff8059fa4ae3637d16526b7b9479483a8a309298725a1",
+        "workspace": "aa9a576c60ae8fb8c97f7414c8db303076da3be9730699974522a0cb27a136d5"
+      },
+      "status": "blocked",
+      "receipt": null
+    }
+  ]
+}

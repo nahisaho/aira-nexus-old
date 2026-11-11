@@ -1,0 +1,1238 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "nahisaho/aira",
+    "commit": "f59dd41972253c85f91b966c46cba4fbde9507e0",
+    "root": "skills/co-scientist"
+  },
+  "agents": [],
+  "skills": [
+    {
+      "id": "co-scientist-academic-writing",
+      "name": "co-scientist-academic-writing",
+      "path": "skills/co-scientist/skills/co-scientist-academic-writing/SKILL.md",
+      "gitBlob": "e1f727263c4629d64a4649270f7edc7773404780"
+    },
+    {
+      "id": "co-scientist-active-learning",
+      "name": "co-scientist-active-learning",
+      "path": "skills/co-scientist/skills/co-scientist-active-learning/SKILL.md",
+      "gitBlob": "fb95ee2bfa1ad90d1834d1960a0869c87224f603"
+    },
+    {
+      "id": "co-scientist-adaptive-experiments",
+      "name": "co-scientist-adaptive-experiments",
+      "path": "skills/co-scientist/skills/co-scientist-adaptive-experiments/SKILL.md",
+      "gitBlob": "6b99ae9e7784b9b1c2d4049425aaaf313492859b"
+    },
+    {
+      "id": "co-scientist-admet-pharmacokinetics",
+      "name": "co-scientist-admet-pharmacokinetics",
+      "path": "skills/co-scientist/skills/co-scientist-admet-pharmacokinetics/SKILL.md",
+      "gitBlob": "3ad32f758d0e14c6e23196b0883e0fb2f4e93ab3"
+    },
+    {
+      "id": "co-scientist-advanced-imaging",
+      "name": "co-scientist-advanced-imaging",
+      "path": "skills/co-scientist/skills/co-scientist-advanced-imaging/SKILL.md",
+      "gitBlob": "f072cd448e54516f9f1ef57eae6857503c77fc3c"
+    },
+    {
+      "id": "co-scientist-advanced-visualization",
+      "name": "co-scientist-advanced-visualization",
+      "path": "skills/co-scientist/skills/co-scientist-advanced-visualization/SKILL.md",
+      "gitBlob": "15fd37c82572ce8aa3dbd1d6b5a6fe4070544407"
+    },
+    {
+      "id": "co-scientist-alphafold-structures",
+      "name": "co-scientist-alphafold-structures",
+      "path": "skills/co-scientist/skills/co-scientist-alphafold-structures/SKILL.md",
+      "gitBlob": "c3338c5f54750181976a45bd21cec792a09b4fef"
+    },
+    {
+      "id": "co-scientist-anomaly-detection",
+      "name": "co-scientist-anomaly-detection",
+      "path": "skills/co-scientist/skills/co-scientist-anomaly-detection/SKILL.md",
+      "gitBlob": "a4fad955caf7fbb89288dcbd71d9cdb0fa1fa22a"
+    },
+    {
+      "id": "co-scientist-arrayexpress-expression",
+      "name": "co-scientist-arrayexpress-expression",
+      "path": "skills/co-scientist/skills/co-scientist-arrayexpress-expression/SKILL.md",
+      "gitBlob": "0b951e9301fdb3491c379f6996ab01f325cd4ff4"
+    },
+    {
+      "id": "co-scientist-audit-report",
+      "name": "co-scientist-audit-report",
+      "path": "skills/co-scientist/skills/co-scientist-audit-report/SKILL.md",
+      "gitBlob": "91fb50502f97c091da0af53fdfa94fcee4bfd33f"
+    },
+    {
+      "id": "co-scientist-automl",
+      "name": "co-scientist-automl",
+      "path": "skills/co-scientist/skills/co-scientist-automl/SKILL.md",
+      "gitBlob": "ffb4787a0f3ec050b5ba19041a968ef8fcf4bcd1"
+    },
+    {
+      "id": "co-scientist-bayesian-statistics",
+      "name": "co-scientist-bayesian-statistics",
+      "path": "skills/co-scientist/skills/co-scientist-bayesian-statistics/SKILL.md",
+      "gitBlob": "9eb5da637fc5e72db6d00d76146b5606bfdd2834"
+    },
+    {
+      "id": "co-scientist-biobank-cohort",
+      "name": "co-scientist-biobank-cohort",
+      "path": "skills/co-scientist/skills/co-scientist-biobank-cohort/SKILL.md",
+      "gitBlob": "dd7c4f79784fe3957eef27108f9c4aef4eb62b10"
+    },
+    {
+      "id": "co-scientist-bioinformatics",
+      "name": "co-scientist-bioinformatics",
+      "path": "skills/co-scientist/skills/co-scientist-bioinformatics/SKILL.md",
+      "gitBlob": "9babfc0e3a4ab5ae4ce7065556eac31ed3eaad21"
+    },
+    {
+      "id": "co-scientist-biomedical-pubtator",
+      "name": "co-scientist-biomedical-pubtator",
+      "path": "skills/co-scientist/skills/co-scientist-biomedical-pubtator/SKILL.md",
+      "gitBlob": "fc43d89015e68c53edc03928d2bd0911f86fd1d0"
+    },
+    {
+      "id": "co-scientist-biosignal-processing",
+      "name": "co-scientist-biosignal-processing",
+      "path": "skills/co-scientist/skills/co-scientist-biosignal-processing/SKILL.md",
+      "gitBlob": "5cb75d13574d8728d92fc3d87eaa9ab03cd4a25a"
+    },
+    {
+      "id": "co-scientist-biothings-idmapping",
+      "name": "co-scientist-biothings-idmapping",
+      "path": "skills/co-scientist/skills/co-scientist-biothings-idmapping/SKILL.md",
+      "gitBlob": "6b21a143a2a1e1b89512f5ac1be09f130a0e0443"
+    },
+    {
+      "id": "co-scientist-cancer-genomics",
+      "name": "co-scientist-cancer-genomics",
+      "path": "skills/co-scientist/skills/co-scientist-cancer-genomics/SKILL.md",
+      "gitBlob": "9fc3884267e3353d7319725cef50aec4862192c7"
+    },
+    {
+      "id": "co-scientist-causal-inference",
+      "name": "co-scientist-causal-inference",
+      "path": "skills/co-scientist/skills/co-scientist-causal-inference/SKILL.md",
+      "gitBlob": "311aaa52bb5cf45721b70c6b682a548c3b18984d"
+    },
+    {
+      "id": "co-scientist-causal-ml",
+      "name": "co-scientist-causal-ml",
+      "path": "skills/co-scientist/skills/co-scientist-causal-ml/SKILL.md",
+      "gitBlob": "dedde7dfa45586c65745f5e4d653e3899358e94f"
+    },
+    {
+      "id": "co-scientist-cell-line-resources",
+      "name": "co-scientist-cell-line-resources",
+      "path": "skills/co-scientist/skills/co-scientist-cell-line-resources/SKILL.md",
+      "gitBlob": "1bbb2e814e4db6321105580e98531a37a29a03d6"
+    },
+    {
+      "id": "co-scientist-cellxgene-census",
+      "name": "co-scientist-cellxgene-census",
+      "path": "skills/co-scientist/skills/co-scientist-cellxgene-census/SKILL.md",
+      "gitBlob": "19fd4fd024303523af61a7b31b792bdf69827715"
+    },
+    {
+      "id": "co-scientist-chembl-assay-mining",
+      "name": "co-scientist-chembl-assay-mining",
+      "path": "skills/co-scientist/skills/co-scientist-chembl-assay-mining/SKILL.md",
+      "gitBlob": "0492518b0d68d20f72f7810170d32812b27e849a"
+    },
+    {
+      "id": "co-scientist-cheminformatics",
+      "name": "co-scientist-cheminformatics",
+      "path": "skills/co-scientist/skills/co-scientist-cheminformatics/SKILL.md",
+      "gitBlob": "bceeee360ffbfdabbefb503e4953690b678c5248"
+    },
+    {
+      "id": "co-scientist-citation-checker",
+      "name": "co-scientist-citation-checker",
+      "path": "skills/co-scientist/skills/co-scientist-citation-checker/SKILL.md",
+      "gitBlob": "2a2f76f530e94c8c5798dc4a0f90a6d71c6f73eb"
+    },
+    {
+      "id": "co-scientist-civic-evidence",
+      "name": "co-scientist-civic-evidence",
+      "path": "skills/co-scientist/skills/co-scientist-civic-evidence/SKILL.md",
+      "gitBlob": "52422e9a724f23b13a7f008a3420e7732bc23587"
+    },
+    {
+      "id": "co-scientist-clingen-curation",
+      "name": "co-scientist-clingen-curation",
+      "path": "skills/co-scientist/skills/co-scientist-clingen-curation/SKILL.md",
+      "gitBlob": "789639607c8cdeea049b733143ddc9a386fe1b70"
+    },
+    {
+      "id": "co-scientist-clinical-decision-support",
+      "name": "co-scientist-clinical-decision-support",
+      "path": "skills/co-scientist/skills/co-scientist-clinical-decision-support/SKILL.md",
+      "gitBlob": "f0fd16fe2d9e3acb58e31921d7bf33797447cef6"
+    },
+    {
+      "id": "co-scientist-clinical-nlp",
+      "name": "co-scientist-clinical-nlp",
+      "path": "skills/co-scientist/skills/co-scientist-clinical-nlp/SKILL.md",
+      "gitBlob": "4572bbca576d6e2329361ead726aa91978f8996a"
+    },
+    {
+      "id": "co-scientist-clinical-pharmacology",
+      "name": "co-scientist-clinical-pharmacology",
+      "path": "skills/co-scientist/skills/co-scientist-clinical-pharmacology/SKILL.md",
+      "gitBlob": "b36e652c04d58f8aee74be7ca1cbb8c4d6f500ef"
+    },
+    {
+      "id": "co-scientist-clinical-reporting",
+      "name": "co-scientist-clinical-reporting",
+      "path": "skills/co-scientist/skills/co-scientist-clinical-reporting/SKILL.md",
+      "gitBlob": "a044ef06f334baf7ef0f0305c0ad0e284f7fdce3"
+    },
+    {
+      "id": "co-scientist-clinical-standards",
+      "name": "co-scientist-clinical-standards",
+      "path": "skills/co-scientist/skills/co-scientist-clinical-standards/SKILL.md",
+      "gitBlob": "0bffb80a03fb34db937f3831acac1fbfe28036c6"
+    },
+    {
+      "id": "co-scientist-clinical-trials-analytics",
+      "name": "co-scientist-clinical-trials-analytics",
+      "path": "skills/co-scientist/skills/co-scientist-clinical-trials-analytics/SKILL.md",
+      "gitBlob": "d083af03376bba508e85c55e66a7b9c43d72259d"
+    },
+    {
+      "id": "co-scientist-compound-screening",
+      "name": "co-scientist-compound-screening",
+      "path": "skills/co-scientist/skills/co-scientist-compound-screening/SKILL.md",
+      "gitBlob": "30e699fb45735d59e431ece13e7ebf11dd2e3474"
+    },
+    {
+      "id": "co-scientist-computational-materials",
+      "name": "co-scientist-computational-materials",
+      "path": "skills/co-scientist/skills/co-scientist-computational-materials/SKILL.md",
+      "gitBlob": "e2d9da5f54d96933bfabeee9cdf4d0deff558963"
+    },
+    {
+      "id": "co-scientist-crispr-design",
+      "name": "co-scientist-crispr-design",
+      "path": "skills/co-scientist/skills/co-scientist-crispr-design/SKILL.md",
+      "gitBlob": "802401d5e9ff6b8e2935d54a6c617caa93a133cc"
+    },
+    {
+      "id": "co-scientist-critical-review",
+      "name": "co-scientist-critical-review",
+      "path": "skills/co-scientist/skills/co-scientist-critical-review/SKILL.md",
+      "gitBlob": "491738dde1f2e82293346368b1815930b67a1c09"
+    },
+    {
+      "id": "co-scientist-crossref-metadata",
+      "name": "co-scientist-crossref-metadata",
+      "path": "skills/co-scientist/skills/co-scientist-crossref-metadata/SKILL.md",
+      "gitBlob": "df1b87bd8a49afed03cd17a49375e2e0d82ef4da"
+    },
+    {
+      "id": "co-scientist-data-analysis",
+      "name": "co-scientist-data-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-data-analysis/SKILL.md",
+      "gitBlob": "66aba6c982ad7d89fc166ed3950d987435fe34d4"
+    },
+    {
+      "id": "co-scientist-data-preprocessing",
+      "name": "co-scientist-data-preprocessing",
+      "path": "skills/co-scientist/skills/co-scientist-data-preprocessing/SKILL.md",
+      "gitBlob": "66bb42aa3883b19fe0b19b11d9361d06d929e6b8"
+    },
+    {
+      "id": "co-scientist-data-profiling",
+      "name": "co-scientist-data-profiling",
+      "path": "skills/co-scientist/skills/co-scientist-data-profiling/SKILL.md",
+      "gitBlob": "58ff27527ffcff5517d9782cc59da891ab5bcca5"
+    },
+    {
+      "id": "co-scientist-data-simulation",
+      "name": "co-scientist-data-simulation",
+      "path": "skills/co-scientist/skills/co-scientist-data-simulation/SKILL.md",
+      "gitBlob": "647e8667431e89523b4dfc3668f68ac036e1e614"
+    },
+    {
+      "id": "co-scientist-data-submission",
+      "name": "co-scientist-data-submission",
+      "path": "skills/co-scientist/skills/co-scientist-data-submission/SKILL.md",
+      "gitBlob": "29ef3d004f9ee9b88d7d6d949b21da2f178c0f05"
+    },
+    {
+      "id": "co-scientist-deep-chemistry",
+      "name": "co-scientist-deep-chemistry",
+      "path": "skills/co-scientist/skills/co-scientist-deep-chemistry/SKILL.md",
+      "gitBlob": "e73b5d76a2804c1f2369be355eeb8b27167c022d"
+    },
+    {
+      "id": "co-scientist-deep-learning",
+      "name": "co-scientist-deep-learning",
+      "path": "skills/co-scientist/skills/co-scientist-deep-learning/SKILL.md",
+      "gitBlob": "b2ea7df75cd43541bbd00f68e5f34c8e030fe893"
+    },
+    {
+      "id": "co-scientist-deep-research",
+      "name": "co-scientist-deep-research",
+      "path": "skills/co-scientist/skills/co-scientist-deep-research/SKILL.md",
+      "gitBlob": "fc3b14b77b399e421c8c22021a4c5511658beab9"
+    },
+    {
+      "id": "co-scientist-depmap-dependencies",
+      "name": "co-scientist-depmap-dependencies",
+      "path": "skills/co-scientist/skills/co-scientist-depmap-dependencies/SKILL.md",
+      "gitBlob": "28eb7b05383896f87235468c81b37efa83bd0419"
+    },
+    {
+      "id": "co-scientist-disease-research",
+      "name": "co-scientist-disease-research",
+      "path": "skills/co-scientist/skills/co-scientist-disease-research/SKILL.md",
+      "gitBlob": "aec1dbf9557f7cdd0cdf7dc01b2c8009ba389968"
+    },
+    {
+      "id": "co-scientist-doe",
+      "name": "co-scientist-doe",
+      "path": "skills/co-scientist/skills/co-scientist-doe/SKILL.md",
+      "gitBlob": "d940df6683bafb5f8119c567c8bf4620cd35c72b"
+    },
+    {
+      "id": "co-scientist-drug-repurposing",
+      "name": "co-scientist-drug-repurposing",
+      "path": "skills/co-scientist/skills/co-scientist-drug-repurposing/SKILL.md",
+      "gitBlob": "73d2ddf44aee12d68b42e23bf7ce84a2d0d8bc29"
+    },
+    {
+      "id": "co-scientist-drug-target-profiling",
+      "name": "co-scientist-drug-target-profiling",
+      "path": "skills/co-scientist/skills/co-scientist-drug-target-profiling/SKILL.md",
+      "gitBlob": "12c2b960891b656cf13f73136ea842a6916ebda5"
+    },
+    {
+      "id": "co-scientist-drugbank-resources",
+      "name": "co-scientist-drugbank-resources",
+      "path": "skills/co-scientist/skills/co-scientist-drugbank-resources/SKILL.md",
+      "gitBlob": "138918e26a1550aed1c3a59666a143d4982de82a"
+    },
+    {
+      "id": "co-scientist-ebi-databases",
+      "name": "co-scientist-ebi-databases",
+      "path": "skills/co-scientist/skills/co-scientist-ebi-databases/SKILL.md",
+      "gitBlob": "d108849452ef7a63befde062408e905af3cdb449"
+    },
+    {
+      "id": "co-scientist-eda-correlation",
+      "name": "co-scientist-eda-correlation",
+      "path": "skills/co-scientist/skills/co-scientist-eda-correlation/SKILL.md",
+      "gitBlob": "8b11109cb27b286b516ca0513823dc152930b09c"
+    },
+    {
+      "id": "co-scientist-encode-screen",
+      "name": "co-scientist-encode-screen",
+      "path": "skills/co-scientist/skills/co-scientist-encode-screen/SKILL.md",
+      "gitBlob": "0131e02ca635b8711711972829ac344720f38d2a"
+    },
+    {
+      "id": "co-scientist-ensembl-genomics",
+      "name": "co-scientist-ensembl-genomics",
+      "path": "skills/co-scientist/skills/co-scientist-ensembl-genomics/SKILL.md",
+      "gitBlob": "bf0b3b5f1891ef469e9b062eae127af8d998ab40"
+    },
+    {
+      "id": "co-scientist-ensemble-methods",
+      "name": "co-scientist-ensemble-methods",
+      "path": "skills/co-scientist/skills/co-scientist-ensemble-methods/SKILL.md",
+      "gitBlob": "7c98d5ab6db9bc99efd3e0892f7c1af208a31a22"
+    },
+    {
+      "id": "co-scientist-environmental-ecology",
+      "name": "co-scientist-environmental-ecology",
+      "path": "skills/co-scientist/skills/co-scientist-environmental-ecology/SKILL.md",
+      "gitBlob": "52846dd811695368866d37b2c2b89c28c7d1553f"
+    },
+    {
+      "id": "co-scientist-environmental-geodata",
+      "name": "co-scientist-environmental-geodata",
+      "path": "skills/co-scientist/skills/co-scientist-environmental-geodata/SKILL.md",
+      "gitBlob": "61f6d5a2d6536c8af1c12f5a0e0dba5c63c823b6"
+    },
+    {
+      "id": "co-scientist-epidemiology-public-health",
+      "name": "co-scientist-epidemiology-public-health",
+      "path": "skills/co-scientist/skills/co-scientist-epidemiology-public-health/SKILL.md",
+      "gitBlob": "20dfeacaf5fbbf015c0c0228801f4b1a47dd7c2f"
+    },
+    {
+      "id": "co-scientist-epigenomics-chromatin",
+      "name": "co-scientist-epigenomics-chromatin",
+      "path": "skills/co-scientist/skills/co-scientist-epigenomics-chromatin/SKILL.md",
+      "gitBlob": "b55f861c1198ecfbf0705246d80a3e11f6d122f6"
+    },
+    {
+      "id": "co-scientist-experiment-fork",
+      "name": "co-scientist-experiment-fork",
+      "path": "skills/co-scientist/skills/co-scientist-experiment-fork/SKILL.md",
+      "gitBlob": "4674540bf2445f4ba9ae58b06360ea7580b707d5"
+    },
+    {
+      "id": "co-scientist-experiment-template",
+      "name": "co-scientist-experiment-template",
+      "path": "skills/co-scientist/skills/co-scientist-experiment-template/SKILL.md",
+      "gitBlob": "5f829cee5b331aeef770f079550f9c9eb157d121"
+    },
+    {
+      "id": "co-scientist-experimental-design",
+      "name": "co-scientist-experimental-design",
+      "path": "skills/co-scientist/skills/co-scientist-experimental-design/SKILL.md",
+      "gitBlob": "4d3faed6ae59603163cb7326a139528fa6981429"
+    },
+    {
+      "id": "co-scientist-explainable-ai",
+      "name": "co-scientist-explainable-ai",
+      "path": "skills/co-scientist/skills/co-scientist-explainable-ai/SKILL.md",
+      "gitBlob": "d1f59db6ff415724e79ccb4f50df3a02375b5f41"
+    },
+    {
+      "id": "co-scientist-expression-comparison",
+      "name": "co-scientist-expression-comparison",
+      "path": "skills/co-scientist/skills/co-scientist-expression-comparison/SKILL.md",
+      "gitBlob": "a6b142a2880b44220f26c307f518a592551401b3"
+    },
+    {
+      "id": "co-scientist-feature-importance",
+      "name": "co-scientist-feature-importance",
+      "path": "skills/co-scientist/skills/co-scientist-feature-importance/SKILL.md",
+      "gitBlob": "ff4ef46cac9bd137e8738b10bf422837cd42090a"
+    },
+    {
+      "id": "co-scientist-federated-learning",
+      "name": "co-scientist-federated-learning",
+      "path": "skills/co-scientist/skills/co-scientist-federated-learning/SKILL.md",
+      "gitBlob": "89ba2048c10a4f459a68409a9b766970382c7358"
+    },
+    {
+      "id": "co-scientist-gdc-portal",
+      "name": "co-scientist-gdc-portal",
+      "path": "skills/co-scientist/skills/co-scientist-gdc-portal/SKILL.md",
+      "gitBlob": "99d25fc68e4fc7c216866c38e05718e90464331f"
+    },
+    {
+      "id": "co-scientist-gene-expression-transcriptomics",
+      "name": "co-scientist-gene-expression-transcriptomics",
+      "path": "skills/co-scientist/skills/co-scientist-gene-expression-transcriptomics/SKILL.md",
+      "gitBlob": "61435df9edeb7690d0a7ee4c86e860ba32be83d9"
+    },
+    {
+      "id": "co-scientist-genome-sequence-tools",
+      "name": "co-scientist-genome-sequence-tools",
+      "path": "skills/co-scientist/skills/co-scientist-genome-sequence-tools/SKILL.md",
+      "gitBlob": "97ada54e24eb93c8b37e862e3489ffe0eacd4312"
+    },
+    {
+      "id": "co-scientist-geo-expression",
+      "name": "co-scientist-geo-expression",
+      "path": "skills/co-scientist/skills/co-scientist-geo-expression/SKILL.md",
+      "gitBlob": "6770efd9f9c2828fadb4c3be6e99340b7f358cba"
+    },
+    {
+      "id": "co-scientist-geospatial-analysis",
+      "name": "co-scientist-geospatial-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-geospatial-analysis/SKILL.md",
+      "gitBlob": "927ce151f03cfb00c5dc7ca8b3a7f8aa55deeb38"
+    },
+    {
+      "id": "co-scientist-glycomics",
+      "name": "co-scientist-glycomics",
+      "path": "skills/co-scientist/skills/co-scientist-glycomics/SKILL.md",
+      "gitBlob": "5899e406e7ac133da7567dd76375ea257a66596e"
+    },
+    {
+      "id": "co-scientist-gnomad-variants",
+      "name": "co-scientist-gnomad-variants",
+      "path": "skills/co-scientist/skills/co-scientist-gnomad-variants/SKILL.md",
+      "gitBlob": "e21d15fbd70ba3f43e8f5d43673d1946e1d865a8"
+    },
+    {
+      "id": "co-scientist-gpu-singlecell",
+      "name": "co-scientist-gpu-singlecell",
+      "path": "skills/co-scientist/skills/co-scientist-gpu-singlecell/SKILL.md",
+      "gitBlob": "077a838d03272634c7a725c938433a1786149e38"
+    },
+    {
+      "id": "co-scientist-grant-writing",
+      "name": "co-scientist-grant-writing",
+      "path": "skills/co-scientist/skills/co-scientist-grant-writing/SKILL.md",
+      "gitBlob": "6306aa734313114fd6abee37480fd8f733741c9d"
+    },
+    {
+      "id": "co-scientist-graph-neural-networks",
+      "name": "co-scientist-graph-neural-networks",
+      "path": "skills/co-scientist/skills/co-scientist-graph-neural-networks/SKILL.md",
+      "gitBlob": "1f765d9e92b1bf052b93e2599c15232ece56ab63"
+    },
+    {
+      "id": "co-scientist-gtex-tissue-expression",
+      "name": "co-scientist-gtex-tissue-expression",
+      "path": "skills/co-scientist/skills/co-scientist-gtex-tissue-expression/SKILL.md",
+      "gitBlob": "23b4043674e81aa48cc801a68636eb2d3ed3de1a"
+    },
+    {
+      "id": "co-scientist-gwas-catalog",
+      "name": "co-scientist-gwas-catalog",
+      "path": "skills/co-scientist/skills/co-scientist-gwas-catalog/SKILL.md",
+      "gitBlob": "ec2bce25349ff285d9c95aa960027d70d106af54"
+    },
+    {
+      "id": "co-scientist-healthcare-ai",
+      "name": "co-scientist-healthcare-ai",
+      "path": "skills/co-scientist/skills/co-scientist-healthcare-ai/SKILL.md",
+      "gitBlob": "6976f734fc359702592fdb5d15c6d30cc53cdfca"
+    },
+    {
+      "id": "co-scientist-hgnc-nomenclature",
+      "name": "co-scientist-hgnc-nomenclature",
+      "path": "skills/co-scientist/skills/co-scientist-hgnc-nomenclature/SKILL.md",
+      "gitBlob": "0a6ec764db0f1c7dceb9b68ef06206be32b6b910"
+    },
+    {
+      "id": "co-scientist-human-cell-atlas",
+      "name": "co-scientist-human-cell-atlas",
+      "path": "skills/co-scientist/skills/co-scientist-human-cell-atlas/SKILL.md",
+      "gitBlob": "1623f8d3dac1581aca9b264345498972ea48d801"
+    },
+    {
+      "id": "co-scientist-human-protein-atlas",
+      "name": "co-scientist-human-protein-atlas",
+      "path": "skills/co-scientist/skills/co-scientist-human-protein-atlas/SKILL.md",
+      "gitBlob": "3074bac9962216931fe4b8e753e456ba1eabe460"
+    },
+    {
+      "id": "co-scientist-hypothesis-pipeline",
+      "name": "co-scientist-hypothesis-pipeline",
+      "path": "skills/co-scientist/skills/co-scientist-hypothesis-pipeline/SKILL.md",
+      "gitBlob": "598aa5339d75abb7439105342d741cd750e98a9c"
+    },
+    {
+      "id": "co-scientist-icgc-cancer-data",
+      "name": "co-scientist-icgc-cancer-data",
+      "path": "skills/co-scientist/skills/co-scientist-icgc-cancer-data/SKILL.md",
+      "gitBlob": "d93c73b82c650aa14b03ffb75a1b625b7f414f5c"
+    },
+    {
+      "id": "co-scientist-image-analysis",
+      "name": "co-scientist-image-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-image-analysis/SKILL.md",
+      "gitBlob": "cfd32e13f490c190e84e9e414feac53bfd4253ae"
+    },
+    {
+      "id": "co-scientist-immunoinformatics",
+      "name": "co-scientist-immunoinformatics",
+      "path": "skills/co-scientist/skills/co-scientist-immunoinformatics/SKILL.md",
+      "gitBlob": "13052c428c411952e0147f4176001b2b976fcb5d"
+    },
+    {
+      "id": "co-scientist-infectious-disease",
+      "name": "co-scientist-infectious-disease",
+      "path": "skills/co-scientist/skills/co-scientist-infectious-disease/SKILL.md",
+      "gitBlob": "71771e854a91e30a86bb6e712cd328ca3c76ce49"
+    },
+    {
+      "id": "co-scientist-interactive-dashboard",
+      "name": "co-scientist-interactive-dashboard",
+      "path": "skills/co-scientist/skills/co-scientist-interactive-dashboard/SKILL.md",
+      "gitBlob": "b001f3b65e9863247dcc8578585c38534fc38a2a"
+    },
+    {
+      "id": "co-scientist-lab-automation",
+      "name": "co-scientist-lab-automation",
+      "path": "skills/co-scientist/skills/co-scientist-lab-automation/SKILL.md",
+      "gitBlob": "b20c5e575aacaea0541a270cc2b3ae71987e882e"
+    },
+    {
+      "id": "co-scientist-lab-data-management",
+      "name": "co-scientist-lab-data-management",
+      "path": "skills/co-scientist/skills/co-scientist-lab-data-management/SKILL.md",
+      "gitBlob": "eba5fef974d2e3226c1c564fc1b5c7a44a925028"
+    },
+    {
+      "id": "co-scientist-latex-export",
+      "name": "co-scientist-latex-export",
+      "path": "skills/co-scientist/skills/co-scientist-latex-export/SKILL.md",
+      "gitBlob": "535e11f92fa8c77ef24b1c74df815701bb676b68"
+    },
+    {
+      "id": "co-scientist-latex-formatter",
+      "name": "co-scientist-latex-formatter",
+      "path": "skills/co-scientist/skills/co-scientist-latex-formatter/SKILL.md",
+      "gitBlob": "4daf3f50ac934ea47dc77ddace358ca1de1b9d8a"
+    },
+    {
+      "id": "co-scientist-learning-capture",
+      "name": "co-scientist-learning-capture",
+      "path": "skills/co-scientist/skills/co-scientist-learning-capture/SKILL.md",
+      "gitBlob": "26de1617dae2153a1e6686be33e8013fd729631a"
+    },
+    {
+      "id": "co-scientist-lipidomics",
+      "name": "co-scientist-lipidomics",
+      "path": "skills/co-scientist/skills/co-scientist-lipidomics/SKILL.md",
+      "gitBlob": "21a5554b37399563f3054d75345c8164a8fd4a5f"
+    },
+    {
+      "id": "co-scientist-literature-review",
+      "name": "co-scientist-literature-review",
+      "path": "skills/co-scientist/skills/co-scientist-literature-review/SKILL.md",
+      "gitBlob": "66e3b22e20b97becb08b05f1b2a90475dc51b65e"
+    },
+    {
+      "id": "co-scientist-literature-search",
+      "name": "co-scientist-literature-search",
+      "path": "skills/co-scientist/skills/co-scientist-literature-search/SKILL.md",
+      "gitBlob": "0a7251f04efaec3218bcac2fa07e91996c6dee50"
+    },
+    {
+      "id": "co-scientist-marine-ecology",
+      "name": "co-scientist-marine-ecology",
+      "path": "skills/co-scientist/skills/co-scientist-marine-ecology/SKILL.md",
+      "gitBlob": "6c78bf5f3925cd38bd59f8a835878214155485c4"
+    },
+    {
+      "id": "co-scientist-materials-characterization",
+      "name": "co-scientist-materials-characterization",
+      "path": "skills/co-scientist/skills/co-scientist-materials-characterization/SKILL.md",
+      "gitBlob": "5934f8cd42b33a5728530cd4f01253eb417de9bb"
+    },
+    {
+      "id": "co-scientist-md-simulation",
+      "name": "co-scientist-md-simulation",
+      "path": "skills/co-scientist/skills/co-scientist-md-simulation/SKILL.md",
+      "gitBlob": "5d65c3e3d8a2feaf255311f186b0d3d96f3320a9"
+    },
+    {
+      "id": "co-scientist-medical-imaging",
+      "name": "co-scientist-medical-imaging",
+      "path": "skills/co-scientist/skills/co-scientist-medical-imaging/SKILL.md",
+      "gitBlob": "de1bf69d1ffbe81e41f08253e737848b244d57dc"
+    },
+    {
+      "id": "co-scientist-meta-analysis",
+      "name": "co-scientist-meta-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-meta-analysis/SKILL.md",
+      "gitBlob": "6cd991e83c857ea88c83e8eb1556c662bf087015"
+    },
+    {
+      "id": "co-scientist-metabolic-atlas",
+      "name": "co-scientist-metabolic-atlas",
+      "path": "skills/co-scientist/skills/co-scientist-metabolic-atlas/SKILL.md",
+      "gitBlob": "4fabf85642d4d0d9acf6a4bb5b2ab7fd24232acb"
+    },
+    {
+      "id": "co-scientist-metabolic-flux",
+      "name": "co-scientist-metabolic-flux",
+      "path": "skills/co-scientist/skills/co-scientist-metabolic-flux/SKILL.md",
+      "gitBlob": "810f676a734a150660bd424381bfcf332ca3e919"
+    },
+    {
+      "id": "co-scientist-metabolic-modeling",
+      "name": "co-scientist-metabolic-modeling",
+      "path": "skills/co-scientist/skills/co-scientist-metabolic-modeling/SKILL.md",
+      "gitBlob": "167a3ea4dd895420bf8f5ccc9539c7e1e5a0bca5"
+    },
+    {
+      "id": "co-scientist-metabolomics",
+      "name": "co-scientist-metabolomics",
+      "path": "skills/co-scientist/skills/co-scientist-metabolomics/SKILL.md",
+      "gitBlob": "a62d1eba4d76f8705d67b53b277c45d36058a303"
+    },
+    {
+      "id": "co-scientist-metabolomics-databases",
+      "name": "co-scientist-metabolomics-databases",
+      "path": "skills/co-scientist/skills/co-scientist-metabolomics-databases/SKILL.md",
+      "gitBlob": "35150be61c9617baf963984b5e10f6498f6de9e2"
+    },
+    {
+      "id": "co-scientist-metabolomics-network",
+      "name": "co-scientist-metabolomics-network",
+      "path": "skills/co-scientist/skills/co-scientist-metabolomics-network/SKILL.md",
+      "gitBlob": "ecc615dfbb8f6177610ff73892c075f891f5f6de"
+    },
+    {
+      "id": "co-scientist-metagenome-assembled-genomes",
+      "name": "co-scientist-metagenome-assembled-genomes",
+      "path": "skills/co-scientist/skills/co-scientist-metagenome-assembled-genomes/SKILL.md",
+      "gitBlob": "23afa4cf3305991c52828b4668a9d4eb0632252b"
+    },
+    {
+      "id": "co-scientist-microbiome-metagenomics",
+      "name": "co-scientist-microbiome-metagenomics",
+      "path": "skills/co-scientist/skills/co-scientist-microbiome-metagenomics/SKILL.md",
+      "gitBlob": "5ecfa52e6968bb2dd8cb0d76f4ad4a43eca7229c"
+    },
+    {
+      "id": "co-scientist-missing-data-analysis",
+      "name": "co-scientist-missing-data-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-missing-data-analysis/SKILL.md",
+      "gitBlob": "e50370f15b97ba14e45bfbc54a4b74b428cbe061"
+    },
+    {
+      "id": "co-scientist-ml-classification",
+      "name": "co-scientist-ml-classification",
+      "path": "skills/co-scientist/skills/co-scientist-ml-classification/SKILL.md",
+      "gitBlob": "6a1a1b79030a746d6c2d7fb3824de1291bd2ad81"
+    },
+    {
+      "id": "co-scientist-ml-regression",
+      "name": "co-scientist-ml-regression",
+      "path": "skills/co-scientist/skills/co-scientist-ml-regression/SKILL.md",
+      "gitBlob": "2aaed738f39bf79fb42027172f5925f4ebc9f9c0"
+    },
+    {
+      "id": "co-scientist-model-monitoring",
+      "name": "co-scientist-model-monitoring",
+      "path": "skills/co-scientist/skills/co-scientist-model-monitoring/SKILL.md",
+      "gitBlob": "0ade97340a07320473b158aead81d7a993ffbecf"
+    },
+    {
+      "id": "co-scientist-model-organism-db",
+      "name": "co-scientist-model-organism-db",
+      "path": "skills/co-scientist/skills/co-scientist-model-organism-db/SKILL.md",
+      "gitBlob": "5f5a1f4e8dcc6506f56fdaa7117e90fb30c64090"
+    },
+    {
+      "id": "co-scientist-molecular-docking",
+      "name": "co-scientist-molecular-docking",
+      "path": "skills/co-scientist/skills/co-scientist-molecular-docking/SKILL.md",
+      "gitBlob": "c959f37632584551af0888c0a9ad08eabaa18544"
+    },
+    {
+      "id": "co-scientist-monarch-ontology",
+      "name": "co-scientist-monarch-ontology",
+      "path": "skills/co-scientist/skills/co-scientist-monarch-ontology/SKILL.md",
+      "gitBlob": "090fa4fe80b0ec05cdb98a1af5e18569a53a0321"
+    },
+    {
+      "id": "co-scientist-multi-omics",
+      "name": "co-scientist-multi-omics",
+      "path": "skills/co-scientist/skills/co-scientist-multi-omics/SKILL.md",
+      "gitBlob": "a9f1f9f12161da9fe4f4a7568ae3b06fa0851006"
+    },
+    {
+      "id": "co-scientist-multi-task-learning",
+      "name": "co-scientist-multi-task-learning",
+      "path": "skills/co-scientist/skills/co-scientist-multi-task-learning/SKILL.md",
+      "gitBlob": "6db6cb198237047f70926fc4e59183f331ae112c"
+    },
+    {
+      "id": "co-scientist-nci60-screening",
+      "name": "co-scientist-nci60-screening",
+      "path": "skills/co-scientist/skills/co-scientist-nci60-screening/SKILL.md",
+      "gitBlob": "20028a02884c31514aad308c0336303e855a098c"
+    },
+    {
+      "id": "co-scientist-network-analysis",
+      "name": "co-scientist-network-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-network-analysis/SKILL.md",
+      "gitBlob": "dda1c2ca23983398cda623dd33c80e7e05668deb"
+    },
+    {
+      "id": "co-scientist-network-visualization",
+      "name": "co-scientist-network-visualization",
+      "path": "skills/co-scientist/skills/co-scientist-network-visualization/SKILL.md",
+      "gitBlob": "a86fb1cc0dc13d0e2adb7b1f8fd1975bb369bc75"
+    },
+    {
+      "id": "co-scientist-neural-architecture-search",
+      "name": "co-scientist-neural-architecture-search",
+      "path": "skills/co-scientist/skills/co-scientist-neural-architecture-search/SKILL.md",
+      "gitBlob": "3a0fe8a6dfbc0f8cd813b00cf0f8553a71f8e6fb"
+    },
+    {
+      "id": "co-scientist-neuroscience-electrophysiology",
+      "name": "co-scientist-neuroscience-electrophysiology",
+      "path": "skills/co-scientist/skills/co-scientist-neuroscience-electrophysiology/SKILL.md",
+      "gitBlob": "49110202882de74430b28aaef94ea446179c3b45"
+    },
+    {
+      "id": "co-scientist-noncoding-rna",
+      "name": "co-scientist-noncoding-rna",
+      "path": "skills/co-scientist/skills/co-scientist-noncoding-rna/SKILL.md",
+      "gitBlob": "2bfe785135ec1720ee1bd8716c3e4f5058cfc1b0"
+    },
+    {
+      "id": "co-scientist-ontology-enrichment",
+      "name": "co-scientist-ontology-enrichment",
+      "path": "skills/co-scientist/skills/co-scientist-ontology-enrichment/SKILL.md",
+      "gitBlob": "4d52656b69fa83503d2954a0b1ca34865ccb1c39"
+    },
+    {
+      "id": "co-scientist-opentargets-genetics",
+      "name": "co-scientist-opentargets-genetics",
+      "path": "skills/co-scientist/skills/co-scientist-opentargets-genetics/SKILL.md",
+      "gitBlob": "b8acabfa2564a42b118d9dbaca667d6bbce6b9f6"
+    },
+    {
+      "id": "co-scientist-paleobiology",
+      "name": "co-scientist-paleobiology",
+      "path": "skills/co-scientist/skills/co-scientist-paleobiology/SKILL.md",
+      "gitBlob": "4465c2ebcb605251aa48209f008a582d571943fd"
+    },
+    {
+      "id": "co-scientist-paper-quality",
+      "name": "co-scientist-paper-quality",
+      "path": "skills/co-scientist/skills/co-scientist-paper-quality/SKILL.md",
+      "gitBlob": "f32e4e9d4bc570bc1c18adc2d91e0dd6f4662692"
+    },
+    {
+      "id": "co-scientist-parasite-genomics",
+      "name": "co-scientist-parasite-genomics",
+      "path": "skills/co-scientist/skills/co-scientist-parasite-genomics/SKILL.md",
+      "gitBlob": "ba5c185b9ee45c4a71f4ed8e133bccbe7084f208"
+    },
+    {
+      "id": "co-scientist-pathway-enrichment",
+      "name": "co-scientist-pathway-enrichment",
+      "path": "skills/co-scientist/skills/co-scientist-pathway-enrichment/SKILL.md",
+      "gitBlob": "9368ca283b934eccb3004e77109d57a0f7034038"
+    },
+    {
+      "id": "co-scientist-pca-tsne",
+      "name": "co-scientist-pca-tsne",
+      "path": "skills/co-scientist/skills/co-scientist-pca-tsne/SKILL.md",
+      "gitBlob": "b63906c198df0511db44e6c2f773a28736b041e0"
+    },
+    {
+      "id": "co-scientist-peer-review",
+      "name": "co-scientist-peer-review",
+      "path": "skills/co-scientist/skills/co-scientist-peer-review/SKILL.md",
+      "gitBlob": "142d3022af01948db59034dca960b810cceb517b"
+    },
+    {
+      "id": "co-scientist-peer-review-response",
+      "name": "co-scientist-peer-review-response",
+      "path": "skills/co-scientist/skills/co-scientist-peer-review-response/SKILL.md",
+      "gitBlob": "e8361abf6bd5b147bea681c4079f0808692d2448"
+    },
+    {
+      "id": "co-scientist-perturbation-analysis",
+      "name": "co-scientist-perturbation-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-perturbation-analysis/SKILL.md",
+      "gitBlob": "98e07727cf92bddd44d9c8b0f9c372b8de59633c"
+    },
+    {
+      "id": "co-scientist-pharmacogenomics",
+      "name": "co-scientist-pharmacogenomics",
+      "path": "skills/co-scientist/skills/co-scientist-pharmacogenomics/SKILL.md",
+      "gitBlob": "b4024d50582ccc77c26bf2d65f74308d48a6da2b"
+    },
+    {
+      "id": "co-scientist-pharmacology-targets",
+      "name": "co-scientist-pharmacology-targets",
+      "path": "skills/co-scientist/skills/co-scientist-pharmacology-targets/SKILL.md",
+      "gitBlob": "7248273d399f3f5e4a160e42af85fc89be14e347"
+    },
+    {
+      "id": "co-scientist-pharmacovigilance",
+      "name": "co-scientist-pharmacovigilance",
+      "path": "skills/co-scientist/skills/co-scientist-pharmacovigilance/SKILL.md",
+      "gitBlob": "73ffc695434140d37f673765ab050775a8a68de1"
+    },
+    {
+      "id": "co-scientist-pharmgkb-pgx",
+      "name": "co-scientist-pharmgkb-pgx",
+      "path": "skills/co-scientist/skills/co-scientist-pharmgkb-pgx/SKILL.md",
+      "gitBlob": "821bb58441927f5a6257cb50fbed67aa550858ef"
+    },
+    {
+      "id": "co-scientist-pharos-targets",
+      "name": "co-scientist-pharos-targets",
+      "path": "skills/co-scientist/skills/co-scientist-pharos-targets/SKILL.md",
+      "gitBlob": "2ed850947bcea92382c7156a51b9e3582e1ebd4d"
+    },
+    {
+      "id": "co-scientist-phylogenetics",
+      "name": "co-scientist-phylogenetics",
+      "path": "skills/co-scientist/skills/co-scientist-phylogenetics/SKILL.md",
+      "gitBlob": "74b1e1303f204bf5faea41ca92304c5693c59db0"
+    },
+    {
+      "id": "co-scientist-pipeline-scaffold",
+      "name": "co-scientist-pipeline-scaffold",
+      "path": "skills/co-scientist/skills/co-scientist-pipeline-scaffold/SKILL.md",
+      "gitBlob": "a441caafb7ea69b8bfd58be177ee5332df909bf7"
+    },
+    {
+      "id": "co-scientist-plant-biology",
+      "name": "co-scientist-plant-biology",
+      "path": "skills/co-scientist/skills/co-scientist-plant-biology/SKILL.md",
+      "gitBlob": "32bb84260390d7b7b4d91cc8dd4904f3d8229887"
+    },
+    {
+      "id": "co-scientist-population-genetics",
+      "name": "co-scientist-population-genetics",
+      "path": "skills/co-scientist/skills/co-scientist-population-genetics/SKILL.md",
+      "gitBlob": "028ee2b80e76281871183f5c66d0ada6cfeb8aac"
+    },
+    {
+      "id": "co-scientist-precision-oncology",
+      "name": "co-scientist-precision-oncology",
+      "path": "skills/co-scientist/skills/co-scientist-precision-oncology/SKILL.md",
+      "gitBlob": "978016ab7e4030c980a739a1ebade28d1058231f"
+    },
+    {
+      "id": "co-scientist-preprint-archive",
+      "name": "co-scientist-preprint-archive",
+      "path": "skills/co-scientist/skills/co-scientist-preprint-archive/SKILL.md",
+      "gitBlob": "d4e146bc70464f05c54e0d6ee7b853df768da974"
+    },
+    {
+      "id": "co-scientist-presentation",
+      "name": "co-scientist-presentation",
+      "path": "skills/co-scientist/skills/co-scientist-presentation/SKILL.md",
+      "gitBlob": "f2b39300030b91e0f400f6b1dd246be58a795814"
+    },
+    {
+      "id": "co-scientist-presentation-design",
+      "name": "co-scientist-presentation-design",
+      "path": "skills/co-scientist/skills/co-scientist-presentation-design/SKILL.md",
+      "gitBlob": "597018532790d2c8b7be7b22e6ac6d901c178130"
+    },
+    {
+      "id": "co-scientist-process-optimization",
+      "name": "co-scientist-process-optimization",
+      "path": "skills/co-scientist/skills/co-scientist-process-optimization/SKILL.md",
+      "gitBlob": "591ea345483ab9cc7f4d2b38b5b3c06b8e69f263"
+    },
+    {
+      "id": "co-scientist-prompt-generator",
+      "name": "co-scientist-prompt-generator",
+      "path": "skills/co-scientist/skills/co-scientist-prompt-generator/SKILL.md",
+      "gitBlob": "f9a7e990eec8f1244d2b954a4b0b1ff6f215985d"
+    },
+    {
+      "id": "co-scientist-protein-design",
+      "name": "co-scientist-protein-design",
+      "path": "skills/co-scientist/skills/co-scientist-protein-design/SKILL.md",
+      "gitBlob": "963bff8ca9c6727ac1635cd8ad35b28a3e6ccd1e"
+    },
+    {
+      "id": "co-scientist-protein-domain-family",
+      "name": "co-scientist-protein-domain-family",
+      "path": "skills/co-scientist/skills/co-scientist-protein-domain-family/SKILL.md",
+      "gitBlob": "d73197a23a989f668da7f1f325f77fd52748d3c1"
+    },
+    {
+      "id": "co-scientist-protein-interaction-network",
+      "name": "co-scientist-protein-interaction-network",
+      "path": "skills/co-scientist/skills/co-scientist-protein-interaction-network/SKILL.md",
+      "gitBlob": "353a5b2f24ca5d130023368928b83c869b9a9cee"
+    },
+    {
+      "id": "co-scientist-protein-structure-analysis",
+      "name": "co-scientist-protein-structure-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-protein-structure-analysis/SKILL.md",
+      "gitBlob": "0ea90ac2446298bfaf317bd574f6abab611e4a9c"
+    },
+    {
+      "id": "co-scientist-proteomics-mass-spectrometry",
+      "name": "co-scientist-proteomics-mass-spectrometry",
+      "path": "skills/co-scientist/skills/co-scientist-proteomics-mass-spectrometry/SKILL.md",
+      "gitBlob": "17d2c42d92a37efc7d3435a9c2c1415c2577b9ad"
+    },
+    {
+      "id": "co-scientist-public-health-data",
+      "name": "co-scientist-public-health-data",
+      "path": "skills/co-scientist/skills/co-scientist-public-health-data/SKILL.md",
+      "gitBlob": "dc7a2d0134cc678e54bff6d4c9cf5d79ccff47d1"
+    },
+    {
+      "id": "co-scientist-publication-figures",
+      "name": "co-scientist-publication-figures",
+      "path": "skills/co-scientist/skills/co-scientist-publication-figures/SKILL.md",
+      "gitBlob": "6fa1096371c203ebb28ccc769b2d40c381194fc8"
+    },
+    {
+      "id": "co-scientist-quantum-computing",
+      "name": "co-scientist-quantum-computing",
+      "path": "skills/co-scientist/skills/co-scientist-quantum-computing/SKILL.md",
+      "gitBlob": "51f168d3754a92c98f0a626dd765f1cdb5eefee9"
+    },
+    {
+      "id": "co-scientist-radiology-ai",
+      "name": "co-scientist-radiology-ai",
+      "path": "skills/co-scientist/skills/co-scientist-radiology-ai/SKILL.md",
+      "gitBlob": "7b5cad7639ed0e71608139a13a0928913fa5284f"
+    },
+    {
+      "id": "co-scientist-rare-disease-genetics",
+      "name": "co-scientist-rare-disease-genetics",
+      "path": "skills/co-scientist/skills/co-scientist-rare-disease-genetics/SKILL.md",
+      "gitBlob": "e13747166beaaccc196ad956615a20ab33cf052c"
+    },
+    {
+      "id": "co-scientist-rcsb-pdb-search",
+      "name": "co-scientist-rcsb-pdb-search",
+      "path": "skills/co-scientist/skills/co-scientist-rcsb-pdb-search/SKILL.md",
+      "gitBlob": "31a4f14780f5fbf9de7fde448e127cc8a173fd44"
+    },
+    {
+      "id": "co-scientist-reactome-pathways",
+      "name": "co-scientist-reactome-pathways",
+      "path": "skills/co-scientist/skills/co-scientist-reactome-pathways/SKILL.md",
+      "gitBlob": "5dd512a433ee5026684e8fd46b74699747305558"
+    },
+    {
+      "id": "co-scientist-regulatory-genomics",
+      "name": "co-scientist-regulatory-genomics",
+      "path": "skills/co-scientist/skills/co-scientist-regulatory-genomics/SKILL.md",
+      "gitBlob": "01453e80fc69670c7886423282129d44d31e2eb9"
+    },
+    {
+      "id": "co-scientist-regulatory-science",
+      "name": "co-scientist-regulatory-science",
+      "path": "skills/co-scientist/skills/co-scientist-regulatory-science/SKILL.md",
+      "gitBlob": "8d3cd781db493ed5d2a9ee30022b30000e52f669"
+    },
+    {
+      "id": "co-scientist-reinforcement-learning",
+      "name": "co-scientist-reinforcement-learning",
+      "path": "skills/co-scientist/skills/co-scientist-reinforcement-learning/SKILL.md",
+      "gitBlob": "b26e19c708d6df0319d5bd53910fdad80c3a1874"
+    },
+    {
+      "id": "co-scientist-reproducibility",
+      "name": "co-scientist-reproducibility",
+      "path": "skills/co-scientist/skills/co-scientist-reproducibility/SKILL.md",
+      "gitBlob": "d88b44d1ace23f30f63f51907b26a5ccbc6869e9"
+    },
+    {
+      "id": "co-scientist-reproducible-reporting",
+      "name": "co-scientist-reproducible-reporting",
+      "path": "skills/co-scientist/skills/co-scientist-reproducible-reporting/SKILL.md",
+      "gitBlob": "7141e237fffb4d3d3dbde94d0394b50ea70619bc"
+    },
+    {
+      "id": "co-scientist-research-methodology",
+      "name": "co-scientist-research-methodology",
+      "path": "skills/co-scientist/skills/co-scientist-research-methodology/SKILL.md",
+      "gitBlob": "339337c0d729eb5b5d55ba96eebb3d286a5568bd"
+    },
+    {
+      "id": "co-scientist-research-planning",
+      "name": "co-scientist-research-planning",
+      "path": "skills/co-scientist/skills/co-scientist-research-planning/SKILL.md",
+      "gitBlob": "79ebb7a27fb11233acf6c948f1429fda8f9aabab"
+    },
+    {
+      "id": "co-scientist-revision-tracker",
+      "name": "co-scientist-revision-tracker",
+      "path": "skills/co-scientist/skills/co-scientist-revision-tracker/SKILL.md",
+      "gitBlob": "3fb39d8eae57aca41bb4b736d04075b4353688a9"
+    },
+    {
+      "id": "co-scientist-rrna-taxonomy",
+      "name": "co-scientist-rrna-taxonomy",
+      "path": "skills/co-scientist/skills/co-scientist-rrna-taxonomy/SKILL.md",
+      "gitBlob": "05014ac8e42baa878853c8872f6e84c1c7f18acc"
+    },
+    {
+      "id": "co-scientist-scatac-signac",
+      "name": "co-scientist-scatac-signac",
+      "path": "skills/co-scientist/skills/co-scientist-scatac-signac/SKILL.md",
+      "gitBlob": "c7cf48fec125deee0ce565c56149d46e92518852"
+    },
+    {
+      "id": "co-scientist-schematics",
+      "name": "co-scientist-schematics",
+      "path": "skills/co-scientist/skills/co-scientist-schematics/SKILL.md",
+      "gitBlob": "ca11314aae3762a9d894dc24a2911d657e04abb8"
+    },
+    {
+      "id": "co-scientist-scvi-integration",
+      "name": "co-scientist-scvi-integration",
+      "path": "skills/co-scientist/skills/co-scientist-scvi-integration/SKILL.md",
+      "gitBlob": "288ff64e77efc6cee967db058ff11886add4a9ee"
+    },
+    {
+      "id": "co-scientist-semantic-scholar",
+      "name": "co-scientist-semantic-scholar",
+      "path": "skills/co-scientist/skills/co-scientist-semantic-scholar/SKILL.md",
+      "gitBlob": "ad2f3675c0aaa594b316e7e7a0c94a531d45f229"
+    },
+    {
+      "id": "co-scientist-semi-supervised-learning",
+      "name": "co-scientist-semi-supervised-learning",
+      "path": "skills/co-scientist/skills/co-scientist-semi-supervised-learning/SKILL.md",
+      "gitBlob": "d3a5fd4869e26eef4f5486a5fb65b2aaa9477e69"
+    },
+    {
+      "id": "co-scientist-sequence-analysis",
+      "name": "co-scientist-sequence-analysis",
+      "path": "skills/co-scientist/skills/co-scientist-sequence-analysis/SKILL.md",
+      "gitBlob": "e8a74bda5ad55f83d1674d64e19a8e5ef35d9aea"
+    },
+    {
+      "id": "co-scientist-single-cell-genomics",
+      "name": "co-scientist-single-cell-genomics",
+      "path": "skills/co-scientist/skills/co-scientist-single-cell-genomics/SKILL.md",
+      "gitBlob": "4532287489912ae3871d519a84ddea7696f58e11"
+    },
+    {
+      "id": "co-scientist-spatial-multiomics",
+      "name": "co-scientist-spatial-multiomics",
+      "path": "skills/co-scientist/skills/co-scientist-spatial-multiomics/SKILL.md",
+      "gitBlob": "e92c9ecfca146cd3499ae485040e401f7d877738"
+    },
+    {
+      "id": "co-scientist-spatial-transcriptomics",
+      "name": "co-scientist-spatial-transcriptomics",
+      "path": "skills/co-scientist/skills/co-scientist-spatial-transcriptomics/SKILL.md",
+      "gitBlob": "36541e169c8993b612326ddf4edc1b0723b6a0e0"
+    },
+    {
+      "id": "co-scientist-spectral-signal",
+      "name": "co-scientist-spectral-signal",
+      "path": "skills/co-scientist/skills/co-scientist-spectral-signal/SKILL.md",
+      "gitBlob": "9ff194359cb1c44bdce54160d89c8cc9e4e713be"
+    },
+    {
+      "id": "co-scientist-squidpy-advanced",
+      "name": "co-scientist-squidpy-advanced",
+      "path": "skills/co-scientist/skills/co-scientist-squidpy-advanced/SKILL.md",
+      "gitBlob": "42df91aa5445608d56a39da88265123b893f725b"
+    },
+    {
+      "id": "co-scientist-statistical-simulation",
+      "name": "co-scientist-statistical-simulation",
+      "path": "skills/co-scientist/skills/co-scientist-statistical-simulation/SKILL.md",
+      "gitBlob": "df553433c5ca421bd7afb668e2445dcbc45b8e00"
+    },
+    {
+      "id": "co-scientist-statistical-testing",
+      "name": "co-scientist-statistical-testing",
+      "path": "skills/co-scientist/skills/co-scientist-statistical-testing/SKILL.md",
+      "gitBlob": "986c6fe8803592a7a1f010a854d648cec4488edf"
+    },
+    {
+      "id": "co-scientist-stitch-chemical-network",
+      "name": "co-scientist-stitch-chemical-network",
+      "path": "skills/co-scientist/skills/co-scientist-stitch-chemical-network/SKILL.md",
+      "gitBlob": "cc17fe41e17c4fa4f0b143eac997d96fc1557337"
+    },
+    {
+      "id": "co-scientist-streaming-analytics",
+      "name": "co-scientist-streaming-analytics",
+      "path": "skills/co-scientist/skills/co-scientist-streaming-analytics/SKILL.md",
+      "gitBlob": "b39d1d2efa2dd11d2584012ec8775543b0ea017a"
+    },
+    {
+      "id": "co-scientist-string-network-api",
+      "name": "co-scientist-string-network-api",
+      "path": "skills/co-scientist/skills/co-scientist-string-network-api/SKILL.md",
+      "gitBlob": "5210fb0e85139f55f69d27e1c123b33a3c4de08a"
+    },
+    {
+      "id": "co-scientist-structural-proteomics",
+      "name": "co-scientist-structural-proteomics",
+      "path": "skills/co-scientist/skills/co-scientist-structural-proteomics/SKILL.md",
+      "gitBlob": "4a91b0ca94605190ec317401886af424c433152e"
+    },
+    {
+      "id": "co-scientist-supplementary-generator",
+      "name": "co-scientist-supplementary-generator",
+      "path": "skills/co-scientist/skills/co-scientist-supplementary-generator/SKILL.md",
+      "gitBlob": "fdad1a2f4b4e3655b4578105e43ce047a9f77753"
+    },
+    {
+      "id": "co-scientist-survival-clinical",
+      "name": "co-scientist-survival-clinical",
+      "path": "skills/co-scientist/skills/co-scientist-survival-clinical/SKILL.md",
+      "gitBlob": "1e7e02d7ec8c729581e171213bc658d69e2c79ec"
+    },
+    {
+      "id": "co-scientist-symbolic-mathematics",
+      "name": "co-scientist-symbolic-mathematics",
+      "path": "skills/co-scientist/skills/co-scientist-symbolic-mathematics/SKILL.md",
+      "gitBlob": "6f4903452cc01ffbdd46242b2cc02512ee52f082"
+    },
+    {
+      "id": "co-scientist-systematic-review",
+      "name": "co-scientist-systematic-review",
+      "path": "skills/co-scientist/skills/co-scientist-systematic-review/SKILL.md",
+      "gitBlob": "e6f124fe61f6780ad642a28f940edb75e0137479"
+    },
+    {
+      "id": "co-scientist-systems-biology",
+      "name": "co-scientist-systems-biology",
+      "path": "skills/co-scientist/skills/co-scientist-systems-biology/SKILL.md",
+      "gitBlob": "0138d0ce96c8e71f1740d51cbe5c37a6e9eac1ef"
+    },
+    {
+      "id": "co-scientist-text-mining-nlp",
+      "name": "co-scientist-text-mining-nlp",
+      "path": "skills/co-scientist/skills/co-scientist-text-mining-nlp/SKILL.md",
+      "gitBlob": "c4f473847ec9ed5e9b8fc711ffed224e345df6c3"
+    },
+    {
+      "id": "co-scientist-time-series",
+      "name": "co-scientist-time-series",
+      "path": "skills/co-scientist/skills/co-scientist-time-series/SKILL.md",
+      "gitBlob": "ef952cbb25ca2b1862b56536409b7d6d6ff474b1"
+    },
+    {
+      "id": "co-scientist-time-series-forecasting",
+      "name": "co-scientist-time-series-forecasting",
+      "path": "skills/co-scientist/skills/co-scientist-time-series-forecasting/SKILL.md",
+      "gitBlob": "ce4229c15df586e59e2e67035465f1c5d5e2587d"
+    },
+    {
+      "id": "co-scientist-toxicology-env",
+      "name": "co-scientist-toxicology-env",
+      "path": "skills/co-scientist/skills/co-scientist-toxicology-env/SKILL.md",
+      "gitBlob": "8b43a2f948891aaec9926fbaecd36f5f634d2c3a"
+    },
+    {
+      "id": "co-scientist-transfer-learning",
+      "name": "co-scientist-transfer-learning",
+      "path": "skills/co-scientist/skills/co-scientist-transfer-learning/SKILL.md",
+      "gitBlob": "15d86936fd0dc962751ff38969f87531ddd00b44"
+    },
+    {
+      "id": "co-scientist-uncertainty-quantification",
+      "name": "co-scientist-uncertainty-quantification",
+      "path": "skills/co-scientist/skills/co-scientist-uncertainty-quantification/SKILL.md",
+      "gitBlob": "c293cc74f918b6a409208e5ca79f40bb51c5e337"
+    },
+    {
+      "id": "co-scientist-uniprot-proteome",
+      "name": "co-scientist-uniprot-proteome",
+      "path": "skills/co-scientist/skills/co-scientist-uniprot-proteome/SKILL.md",
+      "gitBlob": "df6550cd5076fe4be16c0650b797dc9dc5afdd75"
+    },
+    {
+      "id": "co-scientist-variant-effect-prediction",
+      "name": "co-scientist-variant-effect-prediction",
+      "path": "skills/co-scientist/skills/co-scientist-variant-effect-prediction/SKILL.md",
+      "gitBlob": "f792ccfd7403c4f2d31ff20bec1df4e159bcb964"
+    },
+    {
+      "id": "co-scientist-variant-interpretation",
+      "name": "co-scientist-variant-interpretation",
+      "path": "skills/co-scientist/skills/co-scientist-variant-interpretation/SKILL.md",
+      "gitBlob": "1e409414ecc785f8ebe208073312e5cbd87e90be"
+    }
+  ],
+  "mcp": [
+    {
+      "id": "tooluniverse",
+      "name": "ToolUniverse",
+      "path": "skills/co-scientist/.mcp.json",
+      "gitBlob": "0c29479e11d155ae3892c95d1a2d020debc1dd94",
+      "reference": "https://github.com/mims-harvard/ToolUniverse"
+    }
+  ]
+}
